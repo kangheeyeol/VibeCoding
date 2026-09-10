@@ -75,6 +75,15 @@ git fetch origin && git reset --hard origin/snapshot-part-07
 git fetch origin && git reset --hard origin/snapshot-part-09
 ```
 
+### 📦 터미널이 겁날 때: 1초 만에 완성본 ZIP 다운로드
+| 파트 | 포함된 완성 기능 | 원클릭 ZIP 다운로드 |
+| :--- | :--- | :---: |
+| **Part 3** | 작업실 세팅 & 스타터 템플릿 기본 레이아웃 | [📥 `part-03-starter.zip`](https://github.com/kangheeyeol/VibeCoding/archive/refs/tags/v1.0-part-03.zip) |
+| **Part 5** | 300줄의 법칙 적용 완료된 클린 모듈형 컴포넌트 | [📥 `part-05-components.zip`](https://github.com/kangheeyeol/VibeCoding/archive/refs/tags/v1.0-part-05.zip) |
+| **Part 7** | Supabase 클라우드 DB 연동 및 CRUD 완료 | [📥 `part-07-supabase.zip`](https://github.com/kangheeyeol/VibeCoding/archive/refs/tags/v1.0-part-07.zip) |
+| **Part 9** | PWA 모바일 앱 & Vercel 배포 최종 완성본 | [📥 `part-09-final.zip`](https://github.com/kangheeyeol/VibeCoding/archive/refs/tags/v1.0-part-09.zip) |
+| **v1.0.0** | 전체 리포지토리 최신 전체 소스코드 | [📥 `v1.0.0.zip`](https://github.com/kangheeyeol/VibeCoding/archive/refs/tags/v1.0.0.zip) |
+
 ---
 
 ## 📱 주요 화면 및 기능

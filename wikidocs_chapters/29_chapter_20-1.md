@@ -28,13 +28,12 @@ git reset --hard origin/snapshot-part-05
 ## 4. 🗂️ 챕터별 공식 완성본 스냅샷 브랜치 표
 책을 읽다가 어느 구간에서 막히더라도, 아래 브랜치 이름을 확인하고 언제든 뛰어넘으실 수 있습니다:
 
-| 스냅샷 브랜치명 | 포함된 완성 기능 | 건너뛰고 합류할 추천 챕터 |
-| --- | --- | --- |
-| `origin/snapshot-part-02` | 기획안 및 `SPEC.md` 반영 완료 | Part 3 (Cursor 환경 세팅) |
-| `origin/snapshot-part-03` | 공식 스타터 템플릿 설치 및 기본 레이아웃 | Part 4 (대화의 기술 및 규칙 세팅) |
-| `origin/snapshot-part-05` | 300줄 법칙 적용 완료된 클린 컴포넌트 구조 | **Part 6 및 Part 7 (DB 연동)** |
-| `origin/snapshot-part-07` | Supabase DB 연동 및 실시간 습관 등록/조회 | Part 8 (디버깅 및 모바일 검수) |
-| `origin/snapshot-part-09` | 배포 직전 최종 루틴메이트 풀스택 완성본 | Part 9 (Vercel 무료 배포) |
+| 스냅샷 브랜치명 | 포함된 완성 기능 | 건너뛰고 합류할 추천 챕터 | 원클릭 ZIP 다운로드 |
+| :--- | :--- | :--- | :---: |
+| `origin/snapshot-part-03` | 공식 스타터 템플릿 설치 및 기본 레이아웃 | Part 4 (대화의 기술 및 규칙 세팅) | [📥 part-03.zip 다운로드](https://github.com/kangheeyeol/VibeCoding/archive/refs/tags/v1.0-part-03.zip) |
+| `origin/snapshot-part-05` | 300줄 법칙 적용 완료된 클린 컴포넌트 구조 | **Part 6 및 Part 7 (DB 연동)** | [📥 part-05.zip 다운로드](https://github.com/kangheeyeol/VibeCoding/archive/refs/tags/v1.0-part-05.zip) |
+| `origin/snapshot-part-07` | Supabase DB 연동 및 실시간 습관 등록/조회 | Part 8 (디버깅 및 모바일 검수) | [📥 part-07.zip 다운로드](https://github.com/kangheeyeol/VibeCoding/archive/refs/tags/v1.0-part-07.zip) |
+| `origin/snapshot-part-09` | 배포 직전 최종 루틴메이트 풀스택 완성본 | Part 9 (Vercel 무료 배포) | [📥 part-09.zip 다운로드](https://github.com/kangheeyeol/VibeCoding/archive/refs/tags/v1.0-part-09.zip) |
 
 ---
 ## 5. 💌 비개발자 디렉터를 위한 멘토의 응원
