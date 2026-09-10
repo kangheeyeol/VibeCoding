@@ -51,6 +51,6 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY    eyJhbGciOiJIUzI1NiIsIn...
 	3. 상단 **[Deployments]** 탭으로 가서 최신 커밋 우측의 `...` 메뉴를 누르고 **[Redeploy]**를 클릭하세요.
 ---
 ## 6. 🛡️ [세이프티넷] 공식 라이브 데모 사이트
-- 🔗 [루틴메이트 공식 Vercel 배포 데모 체험하기](https://routinemate-starter.vercel.app)
+- 🔗 [루틴메이트 공식 Vercel 배포 데모 체험하기](https://vibe-coding-delta-three.vercel.app/)
 ---
 ---

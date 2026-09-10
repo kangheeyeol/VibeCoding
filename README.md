@@ -6,6 +6,7 @@
 ![RoutineMate Preview](https://raw.githubusercontent.com/kangheeyeol/VibeCoding/main/public/icon.svg)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkangheeyeol%2FVibeCoding&project-name=routinemate)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-vibe--coding--delta--three.vercel.app-6366F1?style=for-the-badge&logo=vercel&logoColor=white)](https://vibe-coding-delta-three.vercel.app/)
 
 ---
 
