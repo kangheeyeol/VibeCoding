@@ -33,7 +33,10 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY    eyJhbGciOiJIUzI1NiIsIn...
 - 하단의 검은색 **[Deploy]** 버튼을 힘차게 클릭합니다!
 - 약 40초~1분 동안 Vercel이 코드를 빌드하고 전 세계 CDN 서버로 복사합니다.
 - 화면 가득 화려한 **폭죽 애니메이션(🎉 Congratulations!)**과 함께 실시간 사이트 썸네일이 나타납니다!
-- 썸네일 아래에 적힌 파란색 URL(예: `https://routinemate-beta.vercel.app`)을 클릭해 보세요.
+- 썸네일 아래에 적힌 파란색 URL(예: `https://routinemate.vercel.app`)을 클릭해 보세요.
+
+> 💡 **원클릭 배포 치트키**: 아래 버튼을 누르면 위 과정이 한 번에 자동 진행됩니다:  
+> [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkangheeyeol%2FVibeCoding&project-name=routinemate)
 ---
 ## 4. 👀 [검수 기준] 성공 체크리스트
 - [ ] Vercel 대시보드에 초록색 `Ready` 상태 표시와 함께 공식 도메인 링크가 생성되었는가?

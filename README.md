@@ -5,6 +5,8 @@
 
 ![RoutineMate Preview](https://raw.githubusercontent.com/kangheeyeol/VibeCoding/main/public/icon.svg)
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkangheeyeol%2FVibeCoding&project-name=routinemate)
+
 ---
 
 ## 📖 도서 연계 안내
