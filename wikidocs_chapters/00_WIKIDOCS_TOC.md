@@ -6,6 +6,10 @@
 > - **실물 링크 동기화 완료**: 공식 GitHub 리포지토리(`https://github.com/kangheeyeol/VibeCoding`) 및 챕터별 스냅샷 브랜치가 정확하게 연결되어 있습니다.
 > - **위키독스 계층 구조 매핑**: 각 Part별 '개요(Overview)' 페이지와 개별 '챕터(Chapter)' 페이지로 깔끔하게 1:1 분할되었습니다.
 
+<p align="center">
+  <img src="./book_cover.jpg" width="280" alt="Book Cover" style="border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);" />
+</p>
+
 ---
 
 ## 🧭 위키독스 목차 트리 및 파일 매핑 표

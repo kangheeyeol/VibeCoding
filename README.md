@@ -3,7 +3,9 @@
 > **"작은 습관이 모여 완벽한 하루를 만듭니다."**  
 > 전자책 **《바이브 코딩으로 내 서비스 만들기: 코딩 몰라도 AI 개발팀 이끄는 법》**의 공식 실습 프로젝트 코드베이스입니다.
 
-![RoutineMate Preview](https://raw.githubusercontent.com/kangheeyeol/VibeCoding/main/public/icon.svg)
+<p align="center">
+  <img src="./public/book_cover.jpg" width="280" alt="Book Cover: 바이브 코딩으로 내 서비스 만들기" style="border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);" />
+</p>
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkangheeyeol%2FVibeCoding&project-name=routinemate)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-vibe--coding--delta--three.vercel.app-6366F1?style=for-the-badge&logo=vercel&logoColor=white)](https://vibe-coding-delta-three.vercel.app/)
