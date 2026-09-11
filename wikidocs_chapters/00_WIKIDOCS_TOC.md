@@ -19,7 +19,7 @@
 | 01 | **프롤로그** | 코딩 한 줄 몰라도 서비스 론칭하는 '바이브 코딩'의 시대 | [`01_prologue.md`](./01_prologue.md) | 3,871자 |
 | 02 | **Part 1. 워밍업** | [Part 1. 워밍업] 개요 및 로드맵 | [`02_part1_overview.md`](./02_part1_overview.md) | 197자 |
 | 03 | **Part 1. 워밍업** | Chapter 01. 2026 웹 AI 빌더 지형도: v0, Bolt.new, Lovable, Replit 완벽 비교 | [`03_chapter_01.md`](./03_chapter_01.md) | 3,548자 |
-| 04 | **Part 1. 워밍업** | Chapter 02. [실습] 프롬프트 세 번으로 브라우저에서 만드는 '루틴메이트 UI 프로토타입' | [`04_chapter_02.md`](./04_chapter_02.md) | 3,653자 |
+| 04 | **Part 1. 워밍업** | Chapter 02. [실습] 프롬프트 세 번으로 브라우저에서 만드는 '루틴메이트 UI 프로토타입' | [`04_chapter_02.md`](./04_chapter_02.md) | 9,460자 |
 | 05 | **Part 1. 워밍업** | Chapter 03. 웹 툴의 명확한 한계: 내 컴퓨터(로컬 환경)로 넘어가야 하는 결정적 이유 | [`05_chapter_03.md`](./05_chapter_03.md) | 2,876자 |
 | 06 | **Part 2. 기획의 정석 (SDD)** | [Part 2. 기획의 정석 (SDD)] 개요 및 로드맵 | [`06_part2_overview.md`](./06_part2_overview.md) | 274자 |
 | 07 | **Part 2. 기획의 정석 (SDD)** | Chapter 04. 망하는 프롬프트 vs 흥하는 프롬프트 (목표, 제약조건, 페르소나, 출력형식) | [`07_chapter_04.md`](./07_chapter_04.md) | 1,932자 |
