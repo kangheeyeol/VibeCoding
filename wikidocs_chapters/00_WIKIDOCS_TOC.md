@@ -22,7 +22,7 @@
 | 04 | **Part 1. 워밍업** | Chapter 02. [실습] 프롬프트 세 번으로 브라우저에서 만드는 '루틴메이트 UI 프로토타입' | [`04_chapter_02.md`](./04_chapter_02.md) | 9,461자 |
 | 05 | **Part 1. 워밍업** | Chapter 03. 웹 툴의 명확한 한계: 내 컴퓨터(로컬 환경)로 넘어가야 하는 결정적 이유 | [`05_chapter_03.md`](./05_chapter_03.md) | 2,877자 |
 | 06 | **Part 2. 기획의 정석 (SDD)** | [Part 2. 기획의 정석 (SDD)] 개요 및 로드맵 | [`06_part2_overview.md`](./06_part2_overview.md) | 275자 |
-| 07 | **Part 2. 기획의 정석 (SDD)** | Chapter 04. 망하는 프롬프트 vs 흥하는 프롬프트 (목표, 제약조건, 페르소나, 출력형식) | [`07_chapter_04.md`](./07_chapter_04.md) | 1,933자 |
+| 07 | **Part 2. 기획의 정석 (SDD)** | Chapter 04. 망하는 프롬프트 vs 흥하는 프롬프트 (목표, 제약조건, 페르소나, 출력형식) | [`07_chapter_04.md`](./07_chapter_04.md) | 10,748자 |
 | 08 | **Part 2. 기획의 정석 (SDD)** | Chapter 05. 단 하나의 진실의 원천: AI의 기억상실증을 치료하는 `SPEC.md` 작성법 | [`08_chapter_05.md`](./08_chapter_05.md) | 1,083자 |
 | 09 | **Part 2. 기획의 정석 (SDD)** | Chapter 06. [실습] 루틴메이트 전용 한 장짜리 PRD(제품 요구사항 정의서) 작성하기 | [`09_chapter_06.md`](./09_chapter_06.md) | 9,074자 |
 | 10 | **Part 2. 기획의 정석 (SDD)** | Chapter 07. 감각이 없어도 전문가처럼: 디자인 시스템(Tailwind, shadcn/ui) 한 번에 입히기 | [`10_chapter_07.md`](./10_chapter_07.md) | 5,822자 |
