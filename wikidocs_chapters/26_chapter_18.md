@@ -31,6 +31,13 @@ Git은 프로그래머들만의 전유물이 아닙니다.
 ### Step 3. 세이브 완료 버튼 누르기
 - 메시지 입력창 바로 아래에 있는 파란색 **[Commit]** (또는 체크 표시 `✓`) 버튼을 꾹 누릅니다.
 - `Changes` 목록이 순식간에 비워지면서, 깨끗하게 세이브 파일 1개가 영구적으로 저장되었습니다!
+
+<p align="center" style="margin: 24px 0;">
+  <img src="https://raw.githubusercontent.com/kangheeyeol/VibeCoding/main/wikidocs_chapters/images/part3_cursor_git.png" alt="Cursor Git 소스 제어 및 커밋 세이브 화면" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+  <br>
+  <span style="font-size: 13px; color: #64748b; font-weight: 500;">▲ [화면 18-1] Cursor 좌측 소스 제어(Git) 패널에서 변경사항을 확인하고 커밋 메시지를 작성하는 화면</span>
+</p>
+
 ---
 ## 4. 👀 [검수 기준] 성공 체크리스트
 - [ ] 왼쪽 소스 제어 창의 `Changes` 항목 아래에 숫자가 사라지고 비어 있는가?

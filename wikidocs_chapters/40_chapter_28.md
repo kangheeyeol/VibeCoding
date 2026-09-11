@@ -40,6 +40,12 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY = 여러분의_긴_anon_public_키</pre>
 - 화면 가득 화려한 **폭죽 애니메이션(🎉 Congratulations!)**과 함께 실시간 사이트 썸네일이 나타납니다!
 - 썸네일 아래에 적힌 파란색 URL(예: `https://routinemate.vercel.app`)을 클릭해 보세요.
 
+<p align="center" style="margin: 24px 0;">
+  <img src="https://raw.githubusercontent.com/kangheeyeol/VibeCoding/main/wikidocs_chapters/images/part9_vercel_congratulations.png" alt="Vercel 배포 완료 축하 화면 및 라이브 URL 대시보드" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+  <br>
+  <span style="font-size: 13px; color: #64748b; font-weight: 500;">▲ [화면 28-1] Vercel 배포 완료 후 터지는 축하 폭죽(Congratulations)과 실시간 라이브 URL 대시보드</span>
+</p>
+
 > 💡 **원클릭 배포 치트키**: 아래 버튼을 누르면 위 과정이 한 번에 자동 진행됩니다:  
 > [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkangheeyeol%2FVibeCoding&project-name=routinemate)
 ---

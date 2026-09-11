@@ -34,6 +34,12 @@
 2. **버그 전이 원천 차단**: 습관 카드를 수정하더라도, 상단 게이지 바나 모달 창에 불똥이 튀지 않습니다.
 3. **토큰 비용 80% 절감**: 질문할 때 `@HabitCard.tsx` 파일 하나만 가볍게 멘션하므로 AI 토큰 낭비를 획기적으로 줄입니다.
 
+<p align="center" style="margin: 24px 0;">
+  <img src="https://raw.githubusercontent.com/kangheeyeol/VibeCoding/main/wikidocs_chapters/images/part5_components_tree.png" alt="300줄의 법칙으로 분리된 컴포넌트 폴더 구조 화면" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+  <br>
+  <span style="font-size: 13px; color: #64748b; font-weight: 500;">▲ [화면 16-1] 300줄이 넘는 거대 파일이 components/ 폴더 아래 깔끔한 단일 책임 컴포넌트들로 분리된 모습</span>
+</p>
+
 ---
 
 ## 4. 📋 [실습] 300줄의 법칙 실전 분리 프롬프트 3선

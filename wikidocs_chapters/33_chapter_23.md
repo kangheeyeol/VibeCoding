@@ -38,7 +38,14 @@ Cursor 에디터에서 새 대화창(`Ctrl + L`)을 열고, 모델을 **Claude 3
 ## 4. 👀 [검수 기준] 성공 체크리스트 (3대 영구 보존 테스트)
 - [ ] **테스트 1 (데이터 등록)**: 브라우저(`localhost:3000`)에서 `+ 새 습관 추가` 버튼을 눌러 "매일 영양제 먹기 💊"를 등록했을 때 카드가 정상적으로 생기는가?
 - [ ] **테스트 2 (새로고침 생존)**: 키보드의 **`F5`****(새로고침)**를 5번 연달아 눌러도 방금 등록한 영양제 습관이 사라지지 않고 그대로 유지되는가?
-- [ ] **테스트 3 (클라우드 직관)**: Supabase 웹 사이트의 **[Table Editor] ➡️ ****`habits`**** 테이블**을 열었을 때, 내가 방금 입력한 "매일 영양제 먹기"가 실시간으로 한 줄 추가되어 있는가?
+- [ ] **테스트 3 (클라우드 직관)**: Supabase 웹 사이트의 **[Table Editor] ➡️ `habits` 테이블**을 열었을 때, 내가 방금 입력한 "매일 영양제 먹기"가 실시간으로 한 줄 추가되어 있는가?
+
+<p align="center" style="margin: 24px 0;">
+  <img src="https://raw.githubusercontent.com/kangheeyeol/VibeCoding/main/wikidocs_chapters/images/part7_supabase_table.png" alt="Supabase Table Editor habits 테이블 데이터 저장 화면" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+  <br>
+  <span style="font-size: 13px; color: #64748b; font-weight: 500;">▲ [화면 23-1] Supabase 대시보드 Table Editor에서 루틴메이트의 habits 테이블 데이터가 실시간 저장된 화면</span>
+</p>
+
 ---
 ## 5. 🚨 [비상 대응] 빨간 글씨(에러)가 떴을 때 응급처치
 **Q. 새 습관을 추가하려고 하니 콘솔에 ****`TypeError: Failed to fetch`**** 또는 ****`Module not found: Can't resolve '@supabase/supabase-js'`**** 에러가 뜹니다!**  

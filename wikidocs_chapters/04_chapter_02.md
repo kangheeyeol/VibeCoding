@@ -61,6 +61,12 @@ AI에게 지시를 내릴 때도 통째로 "앱 만들어줘"라고 하는 것�
 
 > **👀 [1단계 완료 후 확인]:** 화면 중앙에 모바일 비율의 깔끔한 카드와 3개의 습관 리스트가 예쁘게 렌더링되었는지 확인합니다. 아직 클릭해도 반응하지 않는 것이 정상이니, 곧바로 2단계로 넘어갑니다!
 
+<p align="center" style="margin: 24px 0;">
+  <img src="https://raw.githubusercontent.com/kangheeyeol/VibeCoding/main/wikidocs_chapters/images/part1_v0_preview.png" alt="v0.dev 루틴메이트 프로토타입 생성 화면" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+  <br>
+  <span style="font-size: 13px; color: #64748b; font-weight: 500;">▲ [화면 2-1] v0.dev에서 프롬프트를 입력하여 실시간 생성된 루틴메이트 프로토타입 대시보드 화면</span>
+</p>
+
 ---
 
 ### 2단계: 실제로 클릭하며 작동하게 만들기 (2차 프롬프트)

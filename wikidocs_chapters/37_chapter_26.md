@@ -26,6 +26,12 @@
 3. 화면이 스마트폰 비율로 쏙 좁아집니다!
 4. 상단 메뉴에서 `Dimensions: Responsive`를 클릭하여 **`iPhone 14`** 또는 **`Samsung Galaxy S20`**으로 변경해 봅니다.
 
+<p align="center" style="margin: 24px 0;">
+  <img src="https://raw.githubusercontent.com/kangheeyeol/VibeCoding/main/wikidocs_chapters/images/part8_chrome_mobile_f12.png" alt="크롬 개발자 도구 모바일 디바이스 툴바 검수 화면" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+  <br>
+  <span style="font-size: 13px; color: #64748b; font-weight: 500;">▲ [화면 26-1] 크롬 개발자 도구(F12) 디바이스 툴바(Ctrl+Shift+M)로 iPhone 모바일 화면을 검수하는 모습</span>
+</p>
+
 ---
 
 ### Step 2. 디렉터의 모바일 3대 악성 결함 점검
