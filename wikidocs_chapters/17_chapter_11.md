@@ -23,7 +23,17 @@ AI가 기억할 수 있는 용량(컨텍스트 윈도우)은 커다란 **'교실
 ## 4. 📋 새 창을 열고도 기억을 잃지 않는 비법
 *"새 대화창을 열면 AI가 우리 프로젝트를 다 까먹지 않나요?"*  
 전혀 걱정하실 필요가 없습니다! 칠판을 지워도 벽에 걸린 설계도(`SPEC.md`)는 그대로 남아있기 때문입니다.
-새 대화창을 열었을 때는 딱 한 줄만 입력하면 됩니다:
+새 대화창을 열었을 때는 딱 한 줄만 입력하면 됩니다. 아래 복사 버튼을 눌러 프롬프트를 전송하세요:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🎯 [프롬프트] 새 창에서 SPEC 기반 다음 기능 이어가기</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-ch11-new-turn').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
+  </div>
+  <pre id="prompt-ch11-new-turn" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">@SPEC.md 확인하고, 이번엔 F-03번 기능인 '습관 등록 모달 창'을 만들 차례야. 
+현재 코드를 확인하고 필요한 컴포넌트를 설계해줘.</pre>
+</div>
+
 ```plain text
 @SPEC.md 확인하고, 이번엔 F-03번 기능인 '습관 등록 모달 창'을 만들 차례야. 
 현재 코드를 확인하고 필요한 컴포넌트를 설계해줘.

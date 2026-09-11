@@ -20,7 +20,28 @@
 **"디렉터님, 제가 지금 HabitCard 18번째 줄에서 'title'이라는 글자를 찾지 못해 잠시 멈췄습니다. 여기를 확인해 주세요!"**라고 보내는 아주 친절하고 구체적인 SOS 신호입니다.
 ---
 ## 3. 📋 [AI 지시서] 에러를 단번에 해결하는 응급 처방 프롬프트
-에러가 발생하면 터미널이나 브라우저에 뜬 붉은 텍스트를 마우스로 드래그해서 복사(`Ctrl + C`)한 뒤, Cursor AI 채팅창(`Ctrl + L`)에 아래 템플릿과 함께 던지세요.
+
+### 🎯 디렉터 가이드: 에러 메시지 전달 요령
+에러가 발생하면 터미널이나 브라우저 화면의 붉은 텍스트를 마우스로 드래그하여 복사(`Ctrl + C`)하세요.  
+그다음 아래 **[📋 프롬프트 복사하기]** 버튼을 눌러 양식을 복사한 뒤, `[에러 메시지 전문]` 자리에 복사한 텍스트를 채워 AI 채팅창(`Ctrl + L`)에 전달하세요.
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🚨 [프롬프트] 에러 로그 원인 규명 및 무결점 패치 처방전</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-ch24-error-patch').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
+  </div>
+  <pre id="prompt-ch24-error-patch" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">너는 Next.js 14와 React 프론트엔드 최고 디버깅 전문가야.
+우리 루틴메이트 프로젝트를 실행하던 중 다음과 같은 에러가 발생했어:
+
+[에러 메시지 전문]
+{여기에 복사한 빨간 에러 텍스트를 그대로 붙여넣으세요}
+
+[디렉터 요청 사항]
+1. [한 줄 원인]: 비개발자도 직관적으로 이해할 수 있게, 이 에러가 왜 났는지 쉬운 일상 비유로 딱 한 줄 요약해줘.
+2. [범인 위치]: 어느 파일의 몇 번째 줄 코드 때문에 문제가 생긴 건지 정확히 알려줘.
+3. [패치 코드]: 다른 정상 기능이 깨지는 부작용(Side Effect)이 없도록, 해당 부분만 안전하게 수정하는 완벽한 교체 코드를 제안해줘.</pre>
+</div>
+
 ```plain text
 너는 Next.js 14와 React 프론트엔드 최고 디버깅 전문가야.
 우리 루틴메이트 프로젝트를 실행하던 중 다음과 같은 에러가 발생했어:

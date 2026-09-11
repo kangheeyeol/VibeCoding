@@ -23,11 +23,24 @@ Vercel 클라우드 서버도 Supabase DB에 접속할 수 있도록 비밀 열�
 2. Part 7에서 `.env.local`에 적어두었던 두 가지 키를 그대로 추가합니다:
 	- **Key**: `NEXT_PUBLIC_SUPABASE_URL` ➡️ **Value**: `내 Supabase URL 값` 입력 후 [Add] 클릭
 	- **Key**: `NEXT_PUBLIC_SUPABASE_ANON_KEY` ➡️ **Value**: `내 anon 키 값` 입력 후 [Add] 클릭
-```javascript
-[Vercel 환경변수 입력 예시]
-NAME                             VALUE
-NEXT_PUBLIC_SUPABASE_URL         https://xxxxxxxxxxxx.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY    eyJhbGciOiJIUzI1NiIsIn...
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🌐 [Vercel 환경변수 등록 명단] Name / Value 등록 가이드</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('conf-ch28-vercel-env').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 환경변수 양식 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 환경변수 양식 복사하기</button>
+  </div>
+  <pre id="conf-ch28-vercel-env" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;"># Key 1
+NEXT_PUBLIC_SUPABASE_URL = https://여러분의_Supabase_URL.supabase.co
+
+# Key 2
+NEXT_PUBLIC_SUPABASE_ANON_KEY = 여러분의_긴_anon_public_키</pre>
+</div>
+
+```bash
+# Key 1
+NEXT_PUBLIC_SUPABASE_URL = https://여러분의_Supabase_URL.supabase.co
+
+# Key 2
+NEXT_PUBLIC_SUPABASE_ANON_KEY = 여러분의_긴_anon_public_키
 ```
 ### Step 4. 배포 버튼 누르고 축하 파티 즐기기!
 - 하단의 검은색 **[Deploy]** 버튼을 힘차게 클릭합니다!

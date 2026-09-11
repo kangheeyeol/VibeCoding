@@ -11,7 +11,22 @@
 ---
 ## 3. 📋 [AI 지시서 & 빌드 검사 프로토콜]
 ### Step 1. AI에게 최종 배포 품질 검수(QA) 시키기
-Cursor 에디터에서 새 대화창(`Ctrl + L`)을 열고 아래 프롬프트를 실행하여 코드에 숨은 먼지와 타입 에러를 털어냅니다:
+Cursor 에디터에서 새 대화창(`Ctrl + L`)을 열고, 아래 **[📋 프롬프트 복사하기]** 버튼을 눌러 코드에 숨은 먼지와 타입 에러를 털어냅니다:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🛡️ [프롬프트] 배포 직전 최종 사전 QA 및 빌드 무결성 점검 지시서</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-ch27-qa').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
+  </div>
+  <pre id="prompt-ch27-qa" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">너는 Next.js 배포 전 품질 보증(QA) 수석 엔지니어이자 빌드 마스터야.
+우리 루틴메이트 프로젝트를 Vercel에 정식 배포하기 직전의 최종 정리 작업을 진행하려 해.
+
+[최종 품질 점검 체크리스트]
+1. [불필요한 코드 제거]: 쓰이지 않는 import 문, 개발용 console.log, 임시 주석들을 모두 찾아 깔끔하게 삭제해줘.
+2. [TypeScript 무결성 검증]: any 타입 남발이나 누락된 타입 정의가 없는지 전수 점검하고 올바른 인터페이스(Habit, HabitLog)를 부여해줘.
+3. [빌드 적합성 보장]: `npm run build`를 실행했을 때 단 하나의 Warning이나 Type Error 없이 100% 한 번에 통과할 수 있도록 전체 코드를 완벽하게 보정해줘.</pre>
+</div>
+
 ```plain text
 너는 Next.js 배포 전 품질 보증(QA) 수석 엔지니어이자 빌드 마스터야.
 우리 루틴메이트 프로젝트를 Vercel에 정식 배포하기 직전의 최종 정리 작업을 진행하려 해.
@@ -22,7 +37,16 @@ Cursor 에디터에서 새 대화창(`Ctrl + L`)을 열고 아래 프롬프트�
 3. [빌드 적합성 보장]: `npm run build`를 실행했을 때 단 하나의 Warning이나 Type Error 없이 100% 한 번에 통과할 수 있도록 전체 코드를 완벽하게 보정해줘.
 ```
 ### Step 2. 내 컴퓨터에서 직접 최종 빌드 테스트하기
-AI가 수정한 코드를 모두 반영(`Accept All`)한 뒤, 하단 터미널(`Ctrl + ~`)에 다음 명령어를 입력하고 엔터를 칩니다:
+AI가 수정한 코드를 모두 반영(`Accept All`)한 뒤, 하단 터미널(`Ctrl + ~`)에 아래 복사 버튼을 눌러 명령어를 입력하고 엔터를 칩니다:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🏗️ [터미널 명령어] Next.js 배포 빌드 사전 검사</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('cmd-ch27-build').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 명령어 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 명령어 복사하기</button>
+  </div>
+  <pre id="cmd-ch27-build" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">npm run build</pre>
+</div>
+
 ```bash
 npm run build
 ```
@@ -43,8 +67,27 @@ npm run build
 - **원인**: 개발 모드(`npm run dev`)에서는 너그럽게 넘어가 주던 자잘한 오타나 타입 불일치(Type Mismatch)를 빌드 엔진이 엄격하게 잡아낸 것입니다.
 - **해결책**:
 	1. 터미널의 빨간 에러 문구를 그대로 복사합니다.
-	2. Cursor AI 채팅창에 다음과 같이 입력하세요:  
-		`"방금 npm run build 중 다음 에러가 발생했어. 원인을 분석하고 빌드가 정상 통과되도록 즉시 패치해줘: [복사한 에러 붙여넣기]"`
+	2. Cursor AI 채팅창에 아래 복사 버튼을 눌러 에러 해결 프롬프트를 전송하세요:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🚨 [프롬프트] 빌드 실패 원인 분석 및 즉시 통과 패치 지시서</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-ch27-build-fix').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
+  </div>
+  <pre id="prompt-ch27-build-fix" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">방금 npm run build 중 다음 에러가 발생했어.
+원인을 초보자 눈높이에서 1줄로 설명해주고, 빌드가 단 한 번에 정상 통과되도록 코드를 즉시 패치해줘:
+
+[빌드 에러 로그]
+{여기에 터미널의 빨간 에러 메시지를 붙여넣으세요}</pre>
+</div>
+
+```plain text
+방금 npm run build 중 다음 에러가 발생했어.
+원인을 초보자 눈높이에서 1줄로 설명해주고, 빌드가 단 한 번에 정상 통과되도록 코드를 즉시 패치해줘:
+
+[빌드 에러 로그]
+{여기에 터미널의 빨간 에러 메시지를 붙여넣으세요}
+```
 ---
 ## 6. 🛡️ [세이프티넷] 완성본 최종 스냅샷
 - 🔗 [GitHub Snapshot: 배포 직전 최종 완성 소스코드](https://github.com/kangheeyeol/VibeCoding/tree/snapshot-part-09)

@@ -42,11 +42,21 @@ Git은 프로그래머들만의 전유물이 아닙니다.
 - **원인**: 컴퓨터에 "이 세이브 파일을 만든 사람이 누구인지" 이름표가 등록되지 않아서 생기는 최초 1회성 알림입니다.
 - **해결책**:
 	1. 하단 터미널(`Ctrl + ~`)을 엽니다.
-	2. 다음 두 줄을 본인의 닉네임과 이메일로 바꿔서 차례대로 붙여넣고 엔터를 칩니다 (최초 딱 1번만 하면 평생 안 뜹니다):
-		```bash
+	2. 아래 복사 버튼을 눌러 명령어를 복사한 뒤, 본인의 영문 닉네임과 이메일로 변경하여 터미널에 입력하고 엔터를 칩니다 (최초 딱 1번만 등록하면 평생 다시 묻지 않습니다):
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">⚙️ [Git 명령어] 최초 1회 사용자 이름 및 이메일 등록</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('cmd-ch18-gitconfig').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 명령어 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 명령어 복사하기</button>
+  </div>
+  <pre id="cmd-ch18-gitconfig" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">git config --global user.name "내영문닉네임"
+git config --global user.email "내이메일@gmail.com"</pre>
+</div>
+
+```bash
 git config --global user.name "내영문닉네임"
 git config --global user.email "내이메일@gmail.com"
-		```
+```
 	3. 다시 Cursor의 파란색 [Commit] 버튼을 누르면 정상적으로 세이브됩니다.
 ---
 ## 6. 🛡️ [세이프티넷] 공식 템플릿 커밋 히스토리

@@ -39,7 +39,17 @@
 > 반드시 **`anon`**** (public)** 키만 사용해야 합니다.
 ### Step 4. Cursor 프로젝트에 비밀 금고(`.env.local`) 만들기
 1. Cursor 에디터로 돌아와서 최상위 폴더에 **`.env.local`**이라는 새 파일을 만듭니다.
-2. 방금 복사한 두 가지 값을 아래 형식에 맞춰 붙여넣고 저장(`Ctrl + S`)합니다:
+2. 아래 복사 버튼을 눌러 양식을 복사한 뒤, 본인의 실제 값으로 바꿔 채워 넣고 저장(`Ctrl + S`)합니다:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🔒 [.env.local] Supabase 클라우드 비밀 열쇠 환경변수</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('conf-ch21-env').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 설정 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 설정 복사하기</button>
+  </div>
+  <pre id="conf-ch21-env" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">NEXT_PUBLIC_SUPABASE_URL=https://여러분의프로젝트ID.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.여러분의anon키...</pre>
+</div>
+
 ```bash
 NEXT_PUBLIC_SUPABASE_URL=https://여러분의프로젝트ID.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.여러분의anon키...

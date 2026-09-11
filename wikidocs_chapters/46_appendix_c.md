@@ -9,8 +9,19 @@
 | **`npm install`** | **"필요한 부품 일괄 배송받기"** | 프로젝트를 처음 클론받았거나 새 라이브러리 패키지를 설치할 때 |
 
 > 🚨 **초특급 비상 탈출 명령어**:
-> 코드가 도저히 수습할 수 없을 정도로 꼬였을 때 공식 완성본 스냅샷으로 1초 만에 강제 리셋:
-> `git fetch origin && git reset --hard origin/snapshot-part-09`
+> 코드가 도저히 수습할 수 없을 정도로 꼬였을 때 공식 완성본 스냅샷으로 1초 만에 강제 리셋하세요:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">⚡ [비상 복구 명령어] 최종 완성본 스냅샷(Part 9)으로 1초 리셋</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('cmd-appc-reset').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 명령어 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 명령어 복사하기</button>
+  </div>
+  <pre id="cmd-appc-reset" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">git fetch origin && git reset --hard origin/snapshot-part-09</pre>
+</div>
+
+```bash
+git fetch origin && git reset --hard origin/snapshot-part-09
+```
 ---
 ### ⌨️ Cursor 에디터 핵심 단축키 7선
 

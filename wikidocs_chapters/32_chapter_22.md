@@ -17,7 +17,36 @@
 2. **`habit_logs`**: 언제 습관을 실천했는지 날짜 기록 (습관 ID, 완료 날짜 등)
 ### 방법 1. Supabase 웹 콘솔에서 1초 만에 만들기 (가장 쉬운 추천 경로)
 1. Supabase 웹 대시보드 왼쪽 사이드바에서 **[SQL Editor]** (터미널 모양 아이콘)를 클릭합니다.
-2. 초록색 **[+ New query]** 버튼을 누르고, 아래의 공식 스키마 코드를 그대로 복사해서 붙여넣습니다:
+2. 초록색 **[+ New query]** 버튼을 누르고, 아래 복사 버튼을 눌러 공식 스키마 SQL 코드를 복사한 뒤 붙여넣습니다:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🗄️ [SQL 스키마] 습관 및 기록 테이블 2종 생성 & RLS 허용 쿼리</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('sql-ch22-schema').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 SQL 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 SQL 복사하기</button>
+  </div>
+  <pre id="sql-ch22-schema" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">-- 1. 습관 목록 테이블 (habits) 생성
+CREATE TABLE habits (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  title TEXT NOT NULL,
+  emoji TEXT DEFAULT '✨',
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
+-- 2. 습관 완료 기록 테이블 (habit_logs) 생성
+CREATE TABLE habit_logs (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  habit_id UUID REFERENCES habits(id) ON DELETE CASCADE NOT NULL,
+  completed_at DATE DEFAULT CURRENT_DATE NOT NULL
+);
+
+-- 3. 비개발자를 위한 안전한 공개 읽기/쓰기 권한(RLS) 임시 개방
+ALTER TABLE habits ENABLE ROW LEVEL SECURITY;
+ALTER TABLE habit_logs ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Enable read/write for all users" ON habits FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Enable read/write for all users" ON habit_logs FOR ALL USING (true) WITH CHECK (true);</pre>
+</div>
+
 ```sql
 -- 1. 습관 목록 테이블 (habits) 생성
 CREATE TABLE habits (
@@ -45,7 +74,30 @@ CREATE POLICY "Enable read/write for all users" ON habit_logs FOR ALL USING (tru
 	화면에 `Success. No rows returned`가 뜨면 모든 DB 구축이 끝났습니다!
 ---
 ### 방법 2. Cursor MCP 연동 방식 (프로 디렉터 지향)
-Cursor의 `Settings` ➡️ `Features` ➡️ `MCP Servers`에 Supabase MCP를 등록하면, AI 채팅창(`Ctrl + L`)에 아래 프롬프트를 입력하는 것만으로 위 작업이 자동 실행됩니다.
+Cursor의 `Settings` ➡️ `Features` ➡️ `MCP Servers`에 Supabase MCP를 등록하면, AI 채팅창(`Ctrl + L`)에 아래 프롬프트를 입력하는 것만으로 위 작업이 자동 실행됩니다:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🤖 [프롬프트] Supabase MCP 스키마 자동 구축 지시서</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-ch22-mcp').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
+  </div>
+  <pre id="prompt-ch22-mcp" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">너는 데이터베이스 엔지니어이자 Supabase MCP 전문가야.
+우리 프로젝트 @SPEC.md 의 데이터 모델에 맞춰 Supabase에 다음 2개의 테이블을 생성해줘:
+
+1. habits 테이블:
+   - id: uuid (기본키, 자동생성)
+   - title: text (필수)
+   - emoji: text (기본값 '✨')
+   - created_at: timestamptz (기본값 현재시간)
+
+2. habit_logs 테이블:
+   - id: uuid (기본키, 자동생성)
+   - habit_id: uuid (habits.id 참조 외래키, 삭제시 연쇄삭제)
+   - completed_at: date (기본값 오늘날짜)
+
+비개발자 MVP 테스트를 위해 RLS 정책도 모든 사용자 접근 가능(All allowed)으로 함께 활성화해줘.</pre>
+</div>
+
 ```plain text
 너는 데이터베이스 엔지니어이자 Supabase MCP 전문가야.
 우리 프로젝트 @SPEC.md 의 데이터 모델에 맞춰 Supabase에 다음 2개의 테이블을 생성해줘:

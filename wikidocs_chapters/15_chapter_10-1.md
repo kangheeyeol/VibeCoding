@@ -18,14 +18,23 @@
 ### 2단계: Cursor에서 내 프로젝트 열기
 1. 내 깃허브 저장소 화면에서 초록색 **`[ <> Code ]`** 버튼을 누르고 주소를 복사합니다.
 2. **Cursor** 프로그램을 엽니다.
-3. 상단 메뉴에서 **`File`**** **$`\rightarrow`$** ****`Open Folder...`** (또는 시작 화면의 `Clone Repository`)를 선택하여 방금 복제한 프로젝트 폴더를 엽니다.
+3. 상단 메뉴에서 **`File` ➡️ `Open Folder...` (또는 시작 화면의 `Clone Repository`)를 선택하여 방금 복제한 프로젝트 폴더를 엽니다.
 ---
 ### 3단계: 로컬 서버 켜고 내 눈으로 확인하기
-1. Cursor 상단 메뉴에서 **`Terminal`**** **$`\rightarrow`$** ****`New Terminal`**을 클릭합니다. (화면 아래에 카톡 창 같은 터미널이 열립니다.)
-2. 마법의 주문을 입력하고 엔터를 칩니다:
-	```bash
+1. Cursor 상단 메뉴에서 **`Terminal` ➡️ `New Terminal`을 클릭합니다. (화면 아래에 카톡 창 같은 터미널이 열립니다.)
+2. 아래 복사 버튼을 눌러 로컬 서버 실행 명령어를 복사한 뒤 터미널에 붙여넣고 엔터를 칩니다:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🚀 [터미널 명령어] 로컬 개발 서버 실행하기</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('cmd-ch10-npm-dev').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 명령어 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 명령어 복사하기</button>
+  </div>
+  <pre id="cmd-ch10-npm-dev" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">npm run dev</pre>
+</div>
+
+```bash
 npm run dev
-	```
+```
 3. 몇 초 뒤 터미널에 `Ready in 1500ms` 같은 초록색 글씨가 뜨면 성공입니다!
 4. 브라우저를 켜고 주소창에 **`http://localhost:3000`** 을 입력하고 접속해 보세요.
 ---

@@ -18,7 +18,20 @@
 	- 🔴 **Console 탭**: 브라우저 화면 안에서 터진 에러 메시지와 `console.log` 기록을 실시간으로 보여주는 곳.
 	- 🌐 **Network 탭**: 우리 앱이 Supabase 클라우드 서버와 대화를 잘 나누고 있는지(200 OK인지 404/500 에러인지) 감시하는 곳.
 ### 무기 2. AI에게 CCTV(`console.log`) 달아달라고 시키기
-체크박스를 눌렀는데 반응이 없을 때, AI 채팅창(`Ctrl + L`)에 이렇게 말하세요:
+체크박스를 눌렀는데 반응이 없을 때, AI 채팅창(`Ctrl + L`)에 아래 프롬프트를 복사해 전달하세요:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🔍 [프롬프트] 상태 추적용 콘솔 로그(CCTV) 자동 부착 지시서</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-ch25-console-log').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
+  </div>
+  <pre id="prompt-ch25-console-log" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">@components/HabitCard.tsx 파일에서 사용자가 체크박스를 클릭했을 때 실행되는 함수 안에 디버깅용 console.log를 단계별로 상세히 심어줘:
+1. 클릭된 습관의 id와 title 출력
+2. 현재 완료 상태(true/false) 출력
+3. Supabase 통신 성공 또는 실패 시의 응답 결과 출력
+F12 콘솔 창에서 확인하기 쉽게 이모지(👉, 🚨, ✅)를 붙여서 출력해줘.</pre>
+</div>
+
 ```plain text
 @components/HabitCard.tsx 파일에서 사용자가 체크박스를 클릭했을 때 실행되는 함수 안에 디버깅용 console.log를 단계별로 상세히 심어줘:
 1. 클릭된 습관의 id와 title 출력

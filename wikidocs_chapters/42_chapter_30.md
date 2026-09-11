@@ -27,7 +27,26 @@
 	2. 가장 불편했거나 개선되었으면 하는 기능은 무엇인가요?
 - 앱 화면 우측 상단이나 하단에 **[디렉터에게 피드백 보내기 💌]** 버튼을 달아 링크를 연결합니다.
 ### Action 2. Cursor와 함께하는 '디렉터의 2차 스프린트 기획 회의'
-사용자 피드백이 5개 이상 모였다면, Cursor AI 대화창(`Ctrl + L`)을 열고 아래와 같이 회의를 주재하세요:
+사용자 피드백이 5개 이상 모였다면, Cursor AI 대화창(`Ctrl + L`)을 열고 아래 **[📋 프롬프트 복사하기]** 버튼을 눌러 회의를 주재하세요:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">💡 [프롬프트] 사용자 피드백 기반 차기 버전 [SPEC-v2.0.md] 기획 회의</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-ch30-v2-spec').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
+  </div>
+  <pre id="prompt-ch30-v2-spec" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">너는 우리 서비스의 수석 CPO(최고 제품 책임자)야.
+루틴메이트 론칭 1주 차에 사용자들로부터 다음과 같은 실제 피드백이 모였어:
+
+[실제 사용자 피드백 목록]
+1. "어제 깜빡하고 체크를 못 했는데 어제 날짜로 돌아가서 체크할 수 있으면 좋겠어요."
+2. "매일 저녁 9시에 오늘 루틴을 체크하라는 카톡이나 푸시 알림이 오면 좋겠어요."
+3. "연속 7일 달성하면 뱃지나 트로피를 주는 게이미피케이션이 있으면 더 동기부여가 될 것 같아요."
+
+우리 기존 @SPEC.md 문서를 바탕으로:
+- 개발 난이도 대비 사용자 만족도가 가장 높은 기능 2가지를 선정해줘.
+- 이를 반영한 차기 버전 [SPEC-v2.0.md] 명세서 초안을 작성해줘.</pre>
+</div>
+
 ```plain text
 너는 우리 서비스의 수석 CPO(최고 제품 책임자)야.
 루틴메이트 론칭 1주 차에 사용자들로부터 다음과 같은 실제 피드백이 모였어:

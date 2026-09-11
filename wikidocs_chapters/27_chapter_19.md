@@ -47,7 +47,18 @@ AI와 대화를 몇 번 주고받았는데, 에러가 10개씩 터지면서 도�
 - **해결책**:
 	1. 브라우저에서 **강력 새로고침 단축키**를 누릅니다:  
 		`Ctrl + Shift + R` (Mac: `Cmd + Shift + R`)
-	2. 그래도 에러가 남아있다면, 하단 터미널에서 로컬 서버를 껐다 켭니다:  
-		터미널 클릭 후 `Ctrl + C` 누름 ➡️ 다시 `npm run dev` 입력 후 엔터!
+	2. 그래도 에러가 남아있다면, 하단 터미널을 클릭한 뒤 `Ctrl + C`를 눌러 서버를 끄고, 아래 복사 버튼을 눌러 개발 서버를 다시 켭니다:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🔄 [터미널 명령어] 개발 서버 재부팅</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('cmd-ch19-restart').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 명령어 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 명령어 복사하기</button>
+  </div>
+  <pre id="cmd-ch19-restart" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">npm run dev</pre>
+</div>
+
+```bash
+npm run dev
+```
 ---
 ---

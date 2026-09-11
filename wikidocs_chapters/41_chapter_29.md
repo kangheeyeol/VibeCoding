@@ -12,7 +12,32 @@
 4. 실행하면 상단 URL 주소창이 사라지고 **완벽한 전체화면 모바일 앱**으로 작동합니다.
 ---
 ## 3. 📋 [AI 지시서] PWA 매니페스트 및 아이콘 자동 설정
-Cursor AI 대화창(`Ctrl + L`)을 열고 아래 프롬프트를 복사해 붙여넣으세요:
+
+### 🎯 디렉터 가이드: PWA 원클릭 앱 설정 지시법
+Cursor AI 대화창(`Ctrl + L`)을 열고 아래 **[📋 프롬프트 복사하기]** 버튼을 눌러 지시하세요.  
+설명과 프롬프트 본문이 분리되어 있어 손쉽게 복사해 전송할 수 있습니다.
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">📲 [프롬프트] PWA manifest.json 및 모바일 앱 설치 연동 지시서</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-ch29-pwa').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
+  </div>
+  <pre id="prompt-ch29-pwa" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">너는 모바일 PWA(Progressive Web App) 전문가야.
+우리 루틴메이트 웹사이트를 스마트폰 홈 화면에 설치 가능한 완벽한 웹 앱으로 만들어줘.
+
+[작업 가이드라인]
+1. public/manifest.json 파일을 만들고 다음 메타데이터를 정의해줘:
+   - name: "루틴메이트 - 스마트 습관 트래커"
+   - short_name: "루틴메이트"
+   - start_url: "/"
+   - display: "standalone" (브라우저 주소창 숨김 모드)
+   - background_color: "#ffffff"
+   - theme_color: "#6366F1" (앱 메인 인디고 컬러)
+   - icons: 192x192 및 512x512 사이즈의 표준 앱 아이콘 설정
+2. app/layout.tsx 파일의 <head> 태그 안에 PWA 연동 링크 및 아이폰용 apple-touch-icon 메타태그를 깔끔하게 삽입해줘.
+3. 사용자가 사파리(Safari)나 크롬으로 모바일 접속했을 때, 하단에 "홈 화면에 앱으로 추가하고 매일 루틴을 지켜보세요! 📲" 안내 배너를 띄우는 콤팩트한 힌트 컴포넌트(PwaInstallPrompt.tsx)를 제안해줘.</pre>
+</div>
+
 ```plain text
 너는 모바일 PWA(Progressive Web App) 전문가야.
 우리 루틴메이트 웹사이트를 스마트폰 홈 화면에 설치 가능한 완벽한 웹 앱으로 만들어줘.

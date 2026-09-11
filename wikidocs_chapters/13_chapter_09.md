@@ -27,10 +27,19 @@
 윈도우 10/11 환경에서 `npm` 명령어를 칠 때 보안 정책 때문에 빨간 에러가 뜨는 경우가 있습니다. 비개발자가 가장 많이 당황하는 순간입니다.
 - **해결법**: 
 	1. 윈도우 시작 버튼을 마우스 우클릭 $`\rightarrow`$ **[터미널(관리자)]** 또는 **[PowerShell(관리자)]**을 엽니다.
-	2. 다음 한 줄을 복사해서 붙여넣고 엔터를 칩니다:
-		```powershell
+	2. 아래 복사 버튼을 눌러 명령어를 복사한 뒤 터미널에 붙여넣고 엔터를 칩니다:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">⚡ [PowerShell 명령어] 보안 스크립트 실행 권한 해제</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('cmd-ch09-policy').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 명령어 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 명령어 복사하기</button>
+  </div>
+  <pre id="cmd-ch09-policy" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</pre>
+</div>
+
+```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-		```
+```
 	3. `[Y] 예`를 입력하고 엔터를 치면, 평생 다시는 이 에러가 발생하지 않습니다!
 ---
 ---

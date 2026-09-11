@@ -15,7 +15,28 @@
 - ⏱️ **새로운 파트로 넘어가기 전**: Part 6(Git)이나 Part 7(DB 연동)으로 넘어가기 전, 이전 코드를 단단하게 청소해 둡니다.
 ---
 ## 4. 📋 [치트키] AI에게 시키는 정기 대청소 3단계 프롬프트
-Cursor에서 새 대화창(`Ctrl+L`)을 열고 아래 프롬프트를 던져 대청소를 실행하세요.
+
+### 🎯 디렉터 가이드: 새 창에서 대청소 지시하는 법
+새로운 기능을 3개 정도 추가했거나 다음 파트로 넘어가기 전, Cursor에서 새 대화창(`Ctrl + L`)을 열고 아래 프롬프트를 전송하세요.  
+상단의 **[📋 프롬프트 복사하기]** 버튼을 클릭하면 전체 템플릿이 한 번에 복사됩니다.
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🧹 [프롬프트] 클린 코드 및 리팩토링 정기 대청소 지시서</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-ch17-cleanup').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
+  </div>
+  <pre id="prompt-ch17-cleanup" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">너는 꼼꼼한 시니어 코드 리뷰어이자 클린 코드(Clean Code) 전문가야.
+우리 프로젝트의 정기 대청소(리팩토링)를 진행하려고 해.
+새로운 기능을 추가하지 말고, 오직 코드의 품질과 청결도만 개선해줘.
+
+[대청소 3대 체크리스트]
+1. [쓰레기 코드 제거]: 현재 프로젝트에서 쓰이지 않는 불필요한 import문, 안 쓰는 변수, 테스트용 console.log를 모두 찾아 지워줘.
+2. [중복 제거]: 여러 곳에서 반복되는 스타일 코드나 로직을 하나의 깔끔한 공통 함수로 묶어줘.
+3. [가독성 주석]: 비개발자인 내가 코드를 쉽게 이해할 수 있도록, 핵심 로직마다 친절한 한글 주석을 달아줘.
+
+작업을 완료한 후, 어떤 파일들이 어떻게 다이어트되었는지 변경 사항을 3줄로 요약해줘.</pre>
+</div>
+
 ```plain text
 너는 꼼꼼한 시니어 코드 리뷰어이자 클린 코드(Clean Code) 전문가야.
 우리 프로젝트의 정기 대청소(리팩토링)를 진행하려고 해.

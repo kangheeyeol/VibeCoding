@@ -22,12 +22,29 @@ AI에게 질문할 때도 똑같습니다.
 
 ---
 ## 4. 📋 [실전 패턴] 컨텍스트 다이어트 프롬프트 템플릿
+
+### 🎯 디렉터 가이드: 파일 1개만 콕 집어 지시하는 법
+Cursor 채팅창(`Ctrl + L`)에서 `@`를 치고 해당 파일명을 선택한 뒤, 아래와 같이 질문을 던지세요.  
+AI가 프로젝트 전체를 훑지 않고 지정된 파일에만 100% 집중하여 1초 만에 군더더기 없는 완벽한 코드를 완성합니다.
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">⚡ [프롬프트] 단일 파일 타깃팅 컨텍스트 다이어트</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-ch13-diet').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
+  </div>
+  <pre id="prompt-ch13-diet" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">@RoutineCard.tsx 파일 확인해줘.
+현재 체크박스를 누를 때 색깔이 즉시 변하는데, 
+Tailwind의 transition-colors duration-200을 적용해서 
+초록색으로 부드럽게 물들듯이 바뀌도록 효과를 추가해줘.</pre>
+</div>
+
 ```plain text
 @RoutineCard.tsx 파일 확인해줘.
 현재 체크박스를 누를 때 색깔이 즉시 변하는데, 
 Tailwind의 transition-colors duration-200을 적용해서 
 초록색으로 부드럽게 물들듯이 바뀌도록 효과를 추가해줘.
 ```
-*이렇게 파일 하나만 지정해서 지시하면, AI는 1초 만에 정확한 코드를 출력하고 토큰 낭비도 90% 줄어듭니다.*
+
+> 💡 **효과**: 불필요한 전체 파일 탐색을 방지하여 응답 속도가 3배 빨라지고, 소모되는 AI 토큰 비용을 90% 이상 획기적으로 아낄 수 있습니다.
 ---
 ---

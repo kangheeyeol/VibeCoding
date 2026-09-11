@@ -11,11 +11,18 @@
 ---
 ## 3. 📋 [실전 가이드] 1초 만에 공식 완성본 스냅샷으로 갈아 끼우기
 ### 방법 A. 터미널에서 명령어 딱 한 줄로 복구하기 (가장 빠름)
-Cursor 하단 터미널(`Ctrl + ~`)을 열고, 복구하고 싶은 챕터 번호에 맞춰 아래 명령어를 복사해 붙여넣고 엔터만 치면 끝납니다.
+Cursor 하단 터미널(`Ctrl + ~`)을 열고, 복구하고 싶은 챕터 번호에 맞춰 아래 **[📋 명령어 복사하기]** 버튼을 누른 뒤 터미널에 붙여넣고 엔터만 치면 끝납니다.
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">⚡ [비상 복구 명령어] Part 5 클린 완성본 스냅샷으로 1초 강제 롤백</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('cmd-ch20-snapshot').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 명령어 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 명령어 복사하기</button>
+  </div>
+  <pre id="cmd-ch20-snapshot" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">git fetch origin && git reset --hard origin/snapshot-part-05</pre>
+</div>
+
 ```bash
-# 예시: Part 5(컴포넌트 분리)까지 완벽하게 완성된 코드로 강제 복원하고 싶을 때
-git fetch origin
-git reset --hard origin/snapshot-part-05
+git fetch origin && git reset --hard origin/snapshot-part-05
 ```
 > 💡 **명령어 의미**:
 > "내 컴퓨터의 엉망진창인 코드를 다 버리고, 공식 서버(origin)에 저장된 `snapshot-part-05` 시점의 깨끗한 완성본 코드로 100% 똑같이 덮어씌워라!"

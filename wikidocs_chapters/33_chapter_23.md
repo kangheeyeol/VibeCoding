@@ -10,7 +10,30 @@
 	평생 찢어지지 않는 최고급 양장 다이어리에 만년필로 기록하는 것과 같습니다. 내가 노트북을 끄든, 스마트폰으로 접속하든 다이어리에 적힌 습관 목록은 영원히 안전하게 보존됩니다.
 ---
 ## 3. 📋 [AI 지시서] 복사해서 바로 붙여넣는 마법의 프롬프트
-Cursor 에디터에서 새 대화창(`Ctrl + L`)을 열고, 모델을 **Claude 3.5 Sonnet**으로 선택한 뒤 아래 프롬프트를 있는 그대로 복사해서 지시하세요.
+
+### 🎯 디렉터 가이드: 풀스택 DB 연동 지시법
+Cursor 에디터에서 새 대화창(`Ctrl + L`)을 열고, 모델을 **Claude 3.5 Sonnet**으로 선택한 뒤 아래 프롬프트를 전송하세요.  
+설명과 프롬프트 본문이 분리되어 있으므로 **[📋 프롬프트 복사하기]** 버튼을 누르면 한 번에 클립보드에 담깁니다.
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">⚡ [프롬프트] Supabase 클라우드 실시간 DB 연동 지시서</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-ch23-db-sync').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
+  </div>
+  <pre id="prompt-ch23-db-sync" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">너는 Next.js 14(App Router)와 Supabase 연동 전문 풀스택 개발자야.
+우리 루틴메이트 프로젝트의 습관 데이터를 실제 Supabase 클라우드 DB와 실시간 연동하려 해.
+
+[작업 가이드라인]
+1. @.env.local 의 환경변수(NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY)를 읽어와서 Supabase 클라이언트를 생성하는 lib/supabase.ts 파일을 만들어줘. (@supabase/supabase-js 라이브러리 사용)
+2. 현재 @app/page.tsx 및 관련 컴포넌트에서 하드코딩된 mock 데이터를 모두 걷어내줘.
+3. [습관 목록 불러오기]: 페이지가 로드될 때 Supabase의 'habits' 테이블에서 전체 습관 목록을 가져오고, 오늘 날짜로 완료된 기록을 'habit_logs'에서 조회해 체크 여부를 표시해줘.
+4. [새 습관 추가]: 습관 추가 모달에서 입력 후 저장 버튼을 누르면 Supabase 'habits' 테이블에 새 row를 insert하고 화면에 즉시 반영해줘.
+5. [완료 체크/해제 토글]: 습관 카드의 체크박스를 클릭하면:
+   - 체크 시: 'habit_logs' 테이블에 { habit_id, completed_at: 오늘날짜 } 데이터를 insert
+   - 체크 해제 시: 해당 habit_id와 오늘 날짜에 해당하는 'habit_logs' 데이터를 delete
+6. 데이터 통신 중 오류가 발생하면 사용자에게 친절한 토스트 메시지를 띄우고, 로딩 중에는 자연스러운 스켈레톤(Skeleton) UI를 보여줘.</pre>
+</div>
+
 ```plain text
 너는 Next.js 14(App Router)와 Supabase 연동 전문 풀스택 개발자야.
 우리 루틴메이트 프로젝트의 습관 데이터를 실제 Supabase 클라우드 DB와 실시간 연동하려 해.
@@ -37,15 +60,33 @@ Cursor 에디터에서 새 대화창(`Ctrl + L`)을 열고, 모델을 **Claude 3
 - **원인**: 프로젝트에 Supabase와 통신하기 위한 공식 통역사 도구 패키지(`@supabase/supabase-js`)가 설치되지 않은 경우입니다.
 - **해결책**:
 	1. 하단 터미널(`Ctrl + ~`)을 엽니다.
-	2. 다음 명령어를 입력하고 엔터를 쳐서 공식 패키지를 설치합니다:
-		```bash
+	2. 아래 복사 버튼을 눌러 패키지 설치 명령어를 복사한 뒤, 터미널에 붙여넣고 엔터를 칩니다:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">📦 [터미널 명령어] Supabase 공식 SDK 클라이언트 패키지 설치</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('cmd-ch23-npminstall').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 명령어 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 명령어 복사하기</button>
+  </div>
+  <pre id="cmd-ch23-npminstall" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">npm install @supabase/supabase-js</pre>
+</div>
+
+```bash
 npm install @supabase/supabase-js
-		```
+```
 	3. 설치가 완료된 후 다시 브라우저를 새로고침하면 거짓말처럼 정상 동작합니다!
 ---
 ## 6. 🛡️ [세이프티넷] 이번 챕터 공식 완성본 링크
 - 🔗 [GitHub Snapshot: Part 7 완료 시점 전체 소스코드 보러가기](https://github.com/kangheeyeol/VibeCoding/tree/snapshot-part-07)  
-- 코드가 꼬였다면 Chapter 20-1의 구원투수 명령어로 1초 만에 복구하세요:
-	```bash
+- 코드가 꼬였다면 아래 복사 버튼을 눌러 구원투수 명령어를 터미널에 붙여넣고 1초 만에 복구하세요:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">⚡ [비상 복구 명령어] Part 7 Supabase 연동 완성본 스냅샷 롤백</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('cmd-ch23-snapshot').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 명령어 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 명령어 복사하기</button>
+  </div>
+  <pre id="cmd-ch23-snapshot" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">git fetch origin && git reset --hard origin/snapshot-part-07</pre>
+</div>
+
+```bash
 git fetch origin && git reset --hard origin/snapshot-part-07
-	```
+```
