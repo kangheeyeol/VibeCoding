@@ -6,10 +6,10 @@
 ---
 ## 2. 💡 [1분 개념] '전화로 묘사하기' vs 'AI 비서에게 도어락 마스터키 주기'
 - **기존 방식**:  
-	AI에게 "테이블 만들어줘"라고 물어본 뒤, AI가 써준 SQL 코드를 내가 복사해서 Supabase 사이트에 로그인하고 붙여넣어 실행해야 했습니다. 번거롭고 실수하기 쉽습니다.
+  AI에게 "테이블 만들어줘"라고 물어본 뒤, AI가 써준 SQL 코드를 내가 복사해서 Supabase 사이트에 로그인하고 붙여넣어 실행해야 했습니다. 번거롭고 실수하기 쉽습니다.
 - **MCP(Model Context Protocol) 방식**:  
-	AI에게 데이터베이스와 직접 대화할 수 있는 안전한 마스터키(MCP 파이프라인)를 쥐여주는 것입니다.  
-	내가 *"루틴메이트 습관 테이블 만들어줘"*라고 한마디만 하면, AI가 알아서 내 Supabase에 접속해 표를 만들고 "사장님, 테이블 2개와 관계 설정을 완벽히 끝냈습니다!"라고 보고합니다.
+  AI에게 데이터베이스와 직접 대화할 수 있는 안전한 마스터키(MCP 파이프라인)를 쥐여주는 것입니다.  
+  내가 *"루틴메이트 습관 테이블 만들어줘"*라고 한마디만 하면, AI가 알아서 내 Supabase에 접속해 표를 만들고 "사장님, 테이블 2개와 관계 설정을 완벽히 끝냈습니다!"라고 보고합니다.
 ---
 ## 3. 📋 [AI 지시서 & 스키마 생성 2-Way 가이드]
 우리의 루틴메이트에는 2개의 표(Table)가 필요합니다:
@@ -47,7 +47,7 @@ CREATE POLICY "Enable read/write for all users" ON habits FOR ALL USING (true) W
 CREATE POLICY "Enable read/write for all users" ON habit_logs FOR ALL USING (true) WITH CHECK (true);</pre>
 </div>
 1. 오른쪽 하단의 파란색 **[Run]** (또는 `Ctrl + Enter`) 버튼을 누릅니다.  
-	화면에 `Success. No rows returned`가 뜨면 모든 DB 구축이 끝났습니다!
+  화면에 `Success. No rows returned`가 뜨면 모든 DB 구축이 끝났습니다!
 ---
 ### 방법 2. Cursor MCP 연동 방식 (프로 디렉터 지향)
 Cursor의 `Settings` ➡️ `Features` ➡️ `MCP Servers`에 Supabase MCP를 등록하면, AI 채팅창(`Ctrl + L`)에 아래 프롬프트를 입력하는 것만으로 위 작업이 자동 실행됩니다:
@@ -82,9 +82,8 @@ Cursor의 `Settings` ➡️ `Features` ➡️ `MCP Servers`에 Supabase MCP를 �
 **Q. Table Editor에 주황색 방패 아이콘과 함께 "RLS not enabled" 또는 "Access Denied" 경고가 뜹니다!**  
 - **원인**: Supabase의 보안 정책(Row Level Security)으로 인해 외부에서 데이터를 읽거나 쓸 수 없도록 차단된 상태입니다.
 - **해결책**:
-	- 위의 3번 실전 가이드에 적힌 SQL 코드 중 **3번(CREATE POLICY...)** 섹션이 제대로 실행되었는지 확인하세요. 해당 쿼리가 실행되면 누구나 자유롭게 습관을 추가하고 조회할 수 있는 테스트 모드가 열립니다.
+  - 위의 3번 실전 가이드에 적힌 SQL 코드 중 **3번(CREATE POLICY...)** 섹션이 제대로 실행되었는지 확인하세요. 해당 쿼리가 실행되면 누구나 자유롭게 습관을 추가하고 조회할 수 있는 테스트 모드가 열립니다.
 ---
 ## 6. 🛡️ [세이프티넷] 공식 SQL 스키마 원본
 - 🔗 [루틴메이트 공식 GitHub: schema.sql 파일 보러가기](https://github.com/kangheeyeol/VibeCoding/blob/main/supabase/schema.sql)
----
 ---

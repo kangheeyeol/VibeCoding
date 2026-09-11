@@ -5,9 +5,9 @@
 ---
 ## 2. 💡 [1분 개념] '교실 칠판 낙서' vs '가죽 양장 다이어리'
 - **기존 상태 (****`useState`**** 임시 데이터)**:  
-	수업 시간 교실 칠판에 분필로 적어둔 것과 같습니다. 수업이 끝나고 지우개로 쓱 지우면(브라우저 새로고침 `F5`) 모든 글씨가 흔적도 없이 사라집니다.
+  수업 시간 교실 칠판에 분필로 적어둔 것과 같습니다. 수업이 끝나고 지우개로 쓱 지우면(브라우저 새로고침 `F5`) 모든 글씨가 흔적도 없이 사라집니다.
 - **Supabase 연동 후 (클라우드 DB)**:  
-	평생 찢어지지 않는 최고급 양장 다이어리에 만년필로 기록하는 것과 같습니다. 내가 노트북을 끄든, 스마트폰으로 접속하든 다이어리에 적힌 습관 목록은 영원히 안전하게 보존됩니다.
+  평생 찢어지지 않는 최고급 양장 다이어리에 만년필로 기록하는 것과 같습니다. 내가 노트북을 끄든, 스마트폰으로 접속하든 다이어리에 적힌 습관 목록은 영원히 안전하게 보존됩니다.
 ---
 ## 3. 📋 [AI 지시서] 복사해서 바로 붙여넣는 마법의 프롬프트
 
@@ -43,18 +43,24 @@ Cursor 에디터에서 새 대화창(`Ctrl + L`)을 열고, 모델을 **Claude 3
 ## 5. 🚨 [비상 대응] 빨간 글씨(에러)가 떴을 때 응급처치
 **Q. 새 습관을 추가하려고 하니 콘솔에 ****`TypeError: Failed to fetch`**** 또는 ****`Module not found: Can't resolve '@supabase/supabase-js'`**** 에러가 뜹니다!**  
 - **원인**: 프로젝트에 Supabase와 통신하기 위한 공식 통역사 도구 패키지(`@supabase/supabase-js`)가 설치되지 않은 경우입니다.
-- **해결책**:
-	1. 하단 터미널(`Ctrl + ~`)을 엽니다.
-	2. 아래 복사 버튼을 눌러 패키지 설치 명령어를 복사한 뒤, 터미널에 붙여넣고 엔터를 칩니다:
+### 💡 3단계 초간단 해결책
 
-<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+- **1단계: 터미널 열기**  
+  하단 터미널(`Ctrl + ~`)을 엽니다.
+
+- **2단계: 패키지 설치 명령어 실행**  
+  아래 복사 버튼을 눌러 패키지 설치 명령어를 복사한 뒤, 터미널에 붙여넣고 엔터를 칩니다:
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
     <span style="font-weight: 700; color: #0f172a; font-size: 14px;">📦 [터미널 명령어] Supabase 공식 SDK 클라이언트 패키지 설치</span>
     <button onclick="navigator.clipboard.writeText(document.getElementById('cmd-ch23-npminstall').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 명령어 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 명령어 복사하기</button>
   </div>
   <pre id="cmd-ch23-npminstall" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">npm install @supabase/supabase-js</pre>
 </div>
-	3. 설치가 완료된 후 다시 브라우저를 새로고침하면 거짓말처럼 정상 동작합니다!
+
+- **3단계: 브라우저 새로고침**  
+  설치가 완료된 후 브라우저(`F5`)를 새로고침하면 거짓말처럼 정상 동작합니다!
 ---
 ## 6. 🛡️ [세이프티넷] 이번 챕터 공식 완성본 링크
 - 🔗 [GitHub Snapshot: Part 7 완료 시점 전체 소스코드 보러가기](https://github.com/kangheeyeol/VibeCoding/tree/snapshot-part-07)  

@@ -51,9 +51,13 @@ AI가 수정한 코드를 모두 반영(`Accept All`)한 뒤, 하단 터미널(`
 ---
 ## 5. 🚨 [비상 대응] `npm run build` 중 빨간 에러가 떴을 때
 - **원인**: 개발 모드(`npm run dev`)에서는 너그럽게 넘어가 주던 자잘한 오타나 타입 불일치(Type Mismatch)를 빌드 엔진이 엄격하게 잡아낸 것입니다.
-- **해결책**:
-	1. 터미널의 빨간 에러 문구를 그대로 복사합니다.
-	2. Cursor AI 채팅창에 아래 복사 버튼을 눌러 에러 해결 프롬프트를 전송하세요:
+### 💡 2단계 긴급 패치
+
+- **1단계: 에러 문구 복사**  
+  터미널에 출력된 빨간 에러 문구를 마우스로 드래그하여 복사합니다.
+
+- **2단계: AI에게 해결 프롬프트 전송**  
+  Cursor AI 채팅창에 아래 복사 버튼을 눌러 에러 해결 프롬프트를 전달하세요:
 
 <div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
@@ -69,5 +73,4 @@ AI가 수정한 코드를 모두 반영(`Accept All`)한 뒤, 하단 터미널(`
 ---
 ## 6. 🛡️ [세이프티넷] 완성본 최종 스냅샷
 - 🔗 [GitHub Snapshot: 배포 직전 최종 완성 소스코드](https://github.com/kangheeyeol/VibeCoding/tree/snapshot-part-09)
----
 ---

@@ -3,9 +3,9 @@
 ## 1. 🎯 [디렉터 브리핑] 이번 챕터 미션
 - **목표**: 회원가입이나 복잡한 설정 없이, 브라우저에서 단 3번의 대화로 동작하는 **스마트 습관 트래커 「루틴메이트」의 첫 화면**을 완성합니다.
 - **완성할 화면**:
-	1. **상단**: 오늘 날짜와 목표 달성률 게이지(Progress Bar)
-	2. **중앙**: 습관 카드 3개 (💧 물 마시기, 📖 독서하기, 🏃 운동하기)
-	3. **인터랙션**: 체크박스를 누르면 줄이 그어지고 상단 달성률이 쑥 올라가는 시각적 효과
+  1. **상단**: 오늘 날짜와 목표 달성률 게이지(Progress Bar)
+  2. **중앙**: 습관 카드 3개 (💧 물 마시기, 📖 독서하기, 🏃 운동하기)
+  3. **인터랙션**: 체크박스를 누르면 줄이 그어지고 상단 달성률이 쑥 올라가는 시각적 효과
 
 ---
 
@@ -136,7 +136,7 @@ AI가 작성을 마치고 화면을 렌더링하면, 디렉터의 눈으로 다�
 
 ### Q1. 체크박스를 눌러도 색깔이 안 바뀌고 게이지가 안 움직여요!
 - **원인**: AI가 화면(디자인)만 그리고 실제 데이터를 기억하고 바꾸는 '상태(State)' 로직을 빠뜨렸을 때 발생합니다.
-	- **해결 프롬프트**: 아래 복사 버튼을 눌러 상태 로직 복구를 요청하세요.
+  - **해결 프롬프트**: 아래 복사 버튼을 눌러 상태 로직 복구를 요청하세요.
 
 <div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
@@ -148,7 +148,7 @@ AI가 작성을 마치고 화면을 렌더링하면, 디렉터의 눈으로 다�
 
 ### Q2. 텍스트가 길어져서 카드 밖으로 삐져나가거나 깨져 보여요!
 - **원인**: 모바일 화면 크기에 맞춘 여백과 말줄임 설정이 빠졌기 때문입니다.
-	- **해결 프롬프트**: 아래 복사 버튼을 눌러 모바일 반응형 수리를 요청하세요.
+  - **해결 프롬프트**: 아래 복사 버튼을 눌러 모바일 반응형 수리를 요청하세요.
 
 <div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">

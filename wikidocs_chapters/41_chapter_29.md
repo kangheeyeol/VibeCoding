@@ -46,9 +46,8 @@ Cursor AI 대화창(`Ctrl + L`)을 열고 아래 **[📋 프롬프트 복사하�
 ## 5. 🚨 [비상 대응] 아이폰 홈 화면 아이콘이 기본 웹사이트 캡처로 뜰 때
 - **원인**: iOS 사파리는 일반 아이콘 외에 `apple-touch-icon.png`라는 애플 전용 규격 아이콘을 별도로 요구합니다.
 - **해결책**:
-	- `public/apple-touch-icon.png` 파일(180x180 픽셀)이 존재하는지 확인하고, `app/layout.tsx`에 `<link rel="apple-touch-icon" href="/apple-touch-icon.png" />` 태그가 잘 들어갔는지 AI에게 점검을 요청하세요.
+  - `public/apple-touch-icon.png` 파일(180x180 픽셀)이 존재하는지 확인하고, `app/layout.tsx`에 `<link rel="apple-touch-icon" href="/apple-touch-icon.png" />` 태그가 잘 들어갔는지 AI에게 점검을 요청하세요.
 ---
 ## 6. 🛡️ [세이프티넷] PWA 공식 템플릿 파일
 - 🔗 [루틴메이트 공식 manifest.json 및 아이콘 리소스 보기](https://github.com/kangheeyeol/VibeCoding/tree/main/public)
----
 ---

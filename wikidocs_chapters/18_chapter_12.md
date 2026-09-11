@@ -40,4 +40,3 @@ Cursor의 **`.cursorrules`**와 Claude Code의 **`CLAUDE.md`**가 바로 이 매
 - **보안 엄수**: API Key, 비밀번호, Supabase Service Role Key는 절대 코드에 직접 적지 말고 반드시 `.env.local`을 참조하라.</pre>
 </div>
 ---
----
