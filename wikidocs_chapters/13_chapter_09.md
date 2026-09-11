@@ -36,10 +36,6 @@
   </div>
   <pre id="cmd-ch09-policy" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</pre>
 </div>
-
-```powershell
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
 	3. `[Y] 예`를 입력하고 엔터를 치면, 평생 다시는 이 에러가 발생하지 않습니다!
 ---
 ---

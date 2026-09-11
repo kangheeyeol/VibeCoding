@@ -46,30 +46,6 @@ ALTER TABLE habit_logs ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Enable read/write for all users" ON habits FOR ALL USING (true) WITH CHECK (true);
 CREATE POLICY "Enable read/write for all users" ON habit_logs FOR ALL USING (true) WITH CHECK (true);</pre>
 </div>
-
-```sql
--- 1. 습관 목록 테이블 (habits) 생성
-CREATE TABLE habits (
-  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
-  title TEXT NOT NULL,
-  emoji TEXT DEFAULT '✨',
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
-);
-
--- 2. 습관 완료 기록 테이블 (habit_logs) 생성
-CREATE TABLE habit_logs (
-  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
-  habit_id UUID REFERENCES habits(id) ON DELETE CASCADE NOT NULL,
-  completed_at DATE DEFAULT CURRENT_DATE NOT NULL
-);
-
--- 3. 비개발자를 위한 안전한 공개 읽기/쓰기 권한(RLS) 임시 개방
-ALTER TABLE habits ENABLE ROW LEVEL SECURITY;
-ALTER TABLE habit_logs ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Enable read/write for all users" ON habits FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "Enable read/write for all users" ON habit_logs FOR ALL USING (true) WITH CHECK (true);
-```
 1. 오른쪽 하단의 파란색 **[Run]** (또는 `Ctrl + Enter`) 버튼을 누릅니다.  
 	화면에 `Success. No rows returned`가 뜨면 모든 DB 구축이 끝났습니다!
 ---
@@ -97,24 +73,6 @@ Cursor의 `Settings` ➡️ `Features` ➡️ `MCP Servers`에 Supabase MCP를 �
 
 비개발자 MVP 테스트를 위해 RLS 정책도 모든 사용자 접근 가능(All allowed)으로 함께 활성화해줘.</pre>
 </div>
-
-```plain text
-너는 데이터베이스 엔지니어이자 Supabase MCP 전문가야.
-우리 프로젝트 @SPEC.md 의 데이터 모델에 맞춰 Supabase에 다음 2개의 테이블을 생성해줘:
-
-1. habits 테이블:
-   - id: uuid (기본키, 자동생성)
-   - title: text (필수)
-   - emoji: text (기본값 '✨')
-   - created_at: timestamptz (기본값 현재시간)
-
-2. habit_logs 테이블:
-   - id: uuid (기본키, 자동생성)
-   - habit_id: uuid (habits.id 참조 외래키, 삭제시 연쇄삭제)
-   - completed_at: date (기본값 오늘날짜)
-
-비개발자 MVP 테스트를 위해 RLS 정책도 모든 사용자 접근 가능(All allowed)으로 함께 활성화해줘.
-```
 ---
 ## 4. 👀 [검수 기준] 성공 체크리스트
 - [ ] Supabase 왼쪽 메뉴의 **[Table Editor]**를 클릭했을 때, 엑셀 시트처럼 `habits`와 `habit_logs`라는 2개의 테이블이 목록에 나타나는가?

@@ -31,10 +31,6 @@
   </div>
   <pre id="cmd-ch10-npm-dev" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">npm run dev</pre>
 </div>
-
-```bash
-npm run dev
-```
 3. 몇 초 뒤 터미널에 `Ready in 1500ms` 같은 초록색 글씨가 뜨면 성공입니다!
 4. 브라우저를 켜고 주소창에 **`http://localhost:3000`** 을 입력하고 접속해 보세요.
 ---

@@ -56,9 +56,5 @@ AI와 대화를 몇 번 주고받았는데, 에러가 10개씩 터지면서 도�
   </div>
   <pre id="cmd-ch19-restart" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">npm run dev</pre>
 </div>
-
-```bash
-npm run dev
-```
 ---
 ---

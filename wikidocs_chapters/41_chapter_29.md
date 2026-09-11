@@ -37,23 +37,6 @@ Cursor AI 대화창(`Ctrl + L`)을 열고 아래 **[📋 프롬프트 복사하�
 2. app/layout.tsx 파일의 <head> 태그 안에 PWA 연동 링크 및 아이폰용 apple-touch-icon 메타태그를 깔끔하게 삽입해줘.
 3. 사용자가 사파리(Safari)나 크롬으로 모바일 접속했을 때, 하단에 "홈 화면에 앱으로 추가하고 매일 루틴을 지켜보세요! 📲" 안내 배너를 띄우는 콤팩트한 힌트 컴포넌트(PwaInstallPrompt.tsx)를 제안해줘.</pre>
 </div>
-
-```plain text
-너는 모바일 PWA(Progressive Web App) 전문가야.
-우리 루틴메이트 웹사이트를 스마트폰 홈 화면에 설치 가능한 완벽한 웹 앱으로 만들어줘.
-
-[작업 가이드라인]
-1. public/manifest.json 파일을 만들고 다음 메타데이터를 정의해줘:
-   - name: "루틴메이트 - 스마트 습관 트래커"
-   - short_name: "루틴메이트"
-   - start_url: "/"
-   - display: "standalone" (브라우저 주소창 숨김 모드)
-   - background_color: "#ffffff"
-   - theme_color: "#6366F1" (앱 메인 인디고 컬러)
-   - icons: 192x192 및 512x512 사이즈의 표준 앱 아이콘 설정
-2. app/layout.tsx 파일의 <head> 태그 안에 PWA 연동 링크 및 아이폰용 apple-touch-icon 메타태그를 깔끔하게 삽입해줘.
-3. 사용자가 사파리(Safari)나 크롬으로 모바일 접속했을 때, 하단에 "홈 화면에 앱으로 추가하고 매일 루틴을 지켜보세요! 📲" 안내 배너를 띄우는 콤팩트한 힌트 컴포넌트(PwaInstallPrompt.tsx)를 제안해줘.
-```
 ---
 ## 4. 👀 [검수 기준] 스마트폰 실전 설치 테스트
 - [ ] **아이폰 (Safari)**: 하단 가운데 공유 버튼(네모에 위 화살표) 클릭 ➡️ **[홈 화면에 추가]** 클릭 ➡️ 바탕화면에 예쁜 루틴메이트 아이콘이 생겼는가?

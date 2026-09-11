@@ -52,11 +52,6 @@ Git은 프로그래머들만의 전유물이 아닙니다.
   <pre id="cmd-ch18-gitconfig" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">git config --global user.name "내영문닉네임"
 git config --global user.email "내이메일@gmail.com"</pre>
 </div>
-
-```bash
-git config --global user.name "내영문닉네임"
-git config --global user.email "내이메일@gmail.com"
-```
 	3. 다시 Cursor의 파란색 [Commit] 버튼을 누르면 정상적으로 세이브됩니다.
 ---
 ## 6. 🛡️ [세이프티넷] 공식 템플릿 커밋 히스토리

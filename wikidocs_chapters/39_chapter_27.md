@@ -26,16 +26,6 @@ Cursor 에디터에서 새 대화창(`Ctrl + L`)을 열고, 아래 **[📋 프�
 2. [TypeScript 무결성 검증]: any 타입 남발이나 누락된 타입 정의가 없는지 전수 점검하고 올바른 인터페이스(Habit, HabitLog)를 부여해줘.
 3. [빌드 적합성 보장]: `npm run build`를 실행했을 때 단 하나의 Warning이나 Type Error 없이 100% 한 번에 통과할 수 있도록 전체 코드를 완벽하게 보정해줘.</pre>
 </div>
-
-```plain text
-너는 Next.js 배포 전 품질 보증(QA) 수석 엔지니어이자 빌드 마스터야.
-우리 루틴메이트 프로젝트를 Vercel에 정식 배포하기 직전의 최종 정리 작업을 진행하려 해.
-
-[최종 품질 점검 체크리스트]
-1. [불필요한 코드 제거]: 쓰이지 않는 import 문, 개발용 console.log, 임시 주석들을 모두 찾아 깔끔하게 삭제해줘.
-2. [TypeScript 무결성 검증]: any 타입 남발이나 누락된 타입 정의가 없는지 전수 점검하고 올바른 인터페이스(Habit, HabitLog)를 부여해줘.
-3. [빌드 적합성 보장]: `npm run build`를 실행했을 때 단 하나의 Warning이나 Type Error 없이 100% 한 번에 통과할 수 있도록 전체 코드를 완벽하게 보정해줘.
-```
 ### Step 2. 내 컴퓨터에서 직접 최종 빌드 테스트하기
 AI가 수정한 코드를 모두 반영(`Accept All`)한 뒤, 하단 터미널(`Ctrl + ~`)에 아래 복사 버튼을 눌러 명령어를 입력하고 엔터를 칩니다:
 
@@ -46,10 +36,6 @@ AI가 수정한 코드를 모두 반영(`Accept All`)한 뒤, 하단 터미널(`
   </div>
   <pre id="cmd-ch27-build" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">npm run build</pre>
 </div>
-
-```bash
-npm run build
-```
 화면에 몇 줄의 체크 과정이 지나간 뒤 다음과 같은 초록색 문구가 뜨면 합격입니다:
 ```bash
 ✓ Compiled successfully
@@ -80,14 +66,6 @@ npm run build
 [빌드 에러 로그]
 {여기에 터미널의 빨간 에러 메시지를 붙여넣으세요}</pre>
 </div>
-
-```plain text
-방금 npm run build 중 다음 에러가 발생했어.
-원인을 초보자 눈높이에서 1줄로 설명해주고, 빌드가 단 한 번에 정상 통과되도록 코드를 즉시 패치해줘:
-
-[빌드 에러 로그]
-{여기에 터미널의 빨간 에러 메시지를 붙여넣으세요}
-```
 ---
 ## 6. 🛡️ [세이프티넷] 완성본 최종 스냅샷
 - 🔗 [GitHub Snapshot: 배포 직전 최종 완성 소스코드](https://github.com/kangheeyeol/VibeCoding/tree/snapshot-part-09)

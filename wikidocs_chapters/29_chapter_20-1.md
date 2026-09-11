@@ -20,10 +20,6 @@ Cursor 하단 터미널(`Ctrl + ~`)을 열고, 복구하고 싶은 챕터 번호
   </div>
   <pre id="cmd-ch20-snapshot" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">git fetch origin && git reset --hard origin/snapshot-part-05</pre>
 </div>
-
-```bash
-git fetch origin && git reset --hard origin/snapshot-part-05
-```
 > 💡 **명령어 의미**:
 > "내 컴퓨터의 엉망진창인 코드를 다 버리고, 공식 서버(origin)에 저장된 `snapshot-part-05` 시점의 깨끗한 완성본 코드로 100% 똑같이 덮어씌워라!"
 ### 방법 B. 터미널조차 겁난다면? ZIP 파일 다운로드 (초보자 추천)

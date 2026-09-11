@@ -59,23 +59,6 @@ AI에게 지시를 내릴 때도 통째로 "앱 만들어줘"라고 하는 것�
 5. 각 카드에는 대표 이모지, 습관 이름, 그리고 큼직한 원형 체크박스를 넣어줘.</pre>
 </div>
 
-```text
-너는 감각적인 미니멀리즘 웹 디자이너이자 숙련된 React 프론트엔드 개발자야.
-스마트 습관/루틴 트래커 웹앱인 '루틴메이트 (RoutineMate)'의 모바일 뷰 프로토타입을 만들어줘.
-
-[화면 요구사항]
-1. 모바일 스마트폰 화면(최대 너비 420px) 크기로 화면 중앙에 깔끔하게 카드 형태로 배치해줘.
-2. 배경은 깔끔한 연한 회색(bg-slate-50), 메인 포인트 컬러는 신선한 에메랄드 그린(emerald-500)을 사용해줘.
-3. [상단 헤더 영역]:
-   - 오늘 날짜(예: "2026년 9월 10일 목요일")와 "오늘의 루틴 (2/3 달성)" 텍스트 표시
-   - 전체 진행률을 보여주는 부드러운 프로그레스 바(Progress Bar) 배치 (현재 66% 채워짐)
-4. [루틴 카드 리스트 영역]: 아래 3개의 예시 습관 카드를 예쁘게 보여줘.
-   - 💧 아침 미온수 한 잔 마시기 (체크 완료 상태)
-   - 📖 경제/기술 도서 10페이지 읽기 (체크 완료 상태)
-   - 🏃 저녁 가벼운 조깅 30분 (체크 안 됨 상태)
-5. 각 카드에는 대표 이모지, 습관 이름, 그리고 큼직한 원형 체크박스를 넣어줘.
-```
-
 > **👀 [1단계 완료 후 확인]:** 화면 중앙에 모바일 비율의 깔끔한 카드와 3개의 습관 리스트가 예쁘게 렌더링되었는지 확인합니다. 아직 클릭해도 반응하지 않는 것이 정상이니, 곧바로 2단계로 넘어갑니다!
 
 ---
@@ -106,17 +89,6 @@ AI에게 지시를 내릴 때도 통째로 "앱 만들어줘"라고 하는 것�
 3. 체크 상태가 바뀔 때마다 상단의 "오늘의 루틴 (N/3 달성)" 숫자와 프로그레스 바 게이지가 실시간으로 부드럽게 변해야 해.</pre>
 </div>
 
-```text
-디자인이 아주 마음에 들어! 이제 사용자가 직접 클릭하면서 작동하도록 기능을 추가해줘.
-
-[동작 요구사항]
-1. 습관 카드의 원형 체크박스를 클릭하면 완료 상태가 토글(Toggle)되게 해줘.
-2. 완료되면:
-   - 체크박스가 초록색으로 채워지며 체크 아이콘(✓)이 표시됨
-   - 습관 텍스트에 연한 취소선이 그어지고 카드가 살짝 연해짐
-3. 체크 상태가 바뀔 때마다 상단의 "오늘의 루틴 (N/3 달성)" 숫자와 프로그레스 바 게이지가 실시간으로 부드럽게 변해야 해.
-```
-
 > **👀 [2단계 완료 후 확인]:** 마우스로 체크박스를 직접 클릭해 보세요! 체크가 켜지고 꺼질 때마다 상단 게이지 바가 `33%` ➔ `66%` ➔ `100%`로 부드럽게 오르내린다면 2단계 대성공입니다.
 
 ---
@@ -145,15 +117,6 @@ AI에게 지시를 내릴 때도 통째로 "앱 만들어줘"라고 하는 것�
   2. "🎉 오늘 목표를 모두 달성하셨어요! 멋진 하루입니다!"라는 축하 메시지가 하단에 깜짝 토스트(Toast) 팝업으로 나타나게 해줘.</pre>
 </div>
 
-```text
-완벽해! 마지막으로 도파민을 주는 축하 효과를 하나 넣어줘.
-
-[축하 인터랙션]
-- 사용자가 3개의 습관을 모두 완료(100% 달성)하는 순간:
-  1. 화면에 화려한 팡파레 폭죽(Confetti) 애니메이션 효과가 터지게 해줘.
-  2. "🎉 오늘 목표를 모두 달성하셨어요! 멋진 하루입니다!"라는 축하 메시지가 하단에 깜짝 토스트(Toast) 팝업으로 나타나게 해줘.
-```
-
 > **👀 [3단계 완료 후 확인]:** 3개의 습관 카드를 모두 체크하여 100%를 달성해 보세요! 화면 가득 화려한 축하 폭죽이 팡 터지며 하단에 칭찬 토스트 팝업이 나타난다면, 여러분의 첫 인터랙티브 웹 프로토타입 완성입니다!
 
 ---
@@ -173,17 +136,27 @@ AI가 작성을 마치고 화면을 렌더링하면, 디렉터의 눈으로 다�
 
 ### Q1. 체크박스를 눌러도 색깔이 안 바뀌고 게이지가 안 움직여요!
 - **원인**: AI가 화면(디자인)만 그리고 실제 데이터를 기억하고 바꾸는 '상태(State)' 로직을 빠뜨렸을 때 발생합니다.
-- **해결 프롬프트**:
-	```plain text
-체크박스를 클릭해도 상태가 바뀌지 않아. React의 useState를 사용해서 체크 여부를 기억하고, 클릭할 때마다 상단 프로그레스 바 수치와 텍스트가 즉시 다시 계산되도록 수정해줘.
-	```
+	- **해결 프롬프트**: 아래 복사 버튼을 눌러 상태 로직 복구를 요청하세요.
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🚨 [응급 처방] 체크박스 상태(useState) 복구 프롬프트</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-ch02-q1').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
+  </div>
+  <pre id="prompt-ch02-q1" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">체크박스를 클릭해도 상태가 바뀌지 않아. React의 useState를 사용해서 체크 여부를 기억하고, 클릭할 때마다 상단 프로그레스 바 수치와 텍스트가 즉시 다시 계산되도록 수정해줘.</pre>
+</div>
 
 ### Q2. 텍스트가 길어져서 카드 밖으로 삐져나가거나 깨져 보여요!
 - **원인**: 모바일 화면 크기에 맞춘 여백과 말줄임 설정이 빠졌기 때문입니다.
-- **해결 프롬프트**:
-	```plain text
-스마트폰 화면에서 카드가 밖으로 넘치지 않도록 전체 컨테이너에 max-w-md와 mx-auto를 적용하고, 습관 텍스트가 길어져도 줄바꿈이 자연스럽게 되도록 레이아웃을 다듬어줘.
-	```
+	- **해결 프롬프트**: 아래 복사 버튼을 눌러 모바일 반응형 수리를 요청하세요.
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+    <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🚨 [응급 처방] 모바일 카드 넘침 방지 프롬프트</span>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-ch02-q2').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
+  </div>
+  <pre id="prompt-ch02-q2" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">스마트폰 화면에서 카드가 밖으로 넘치지 않도록 전체 컨테이너에 max-w-md와 mx-auto를 적용하고, 습관 텍스트가 길어져도 줄바꿈이 자연스럽게 되도록 레이아웃을 다듬어줘.</pre>
+</div>
 
 ---
 

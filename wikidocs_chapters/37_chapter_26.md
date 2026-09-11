@@ -41,19 +41,6 @@ Tailwind CSS를 사용해서 완벽한 모바일 최적화를 적용해줘.
    - 체크박스와 완료 버튼은 모바일 엄지손가락 터치가 편하도록 최소 44px x 44px 이상의 터치 타깃 영역(p-2 등)을 확보해줘.
 3. [여백 다이어트]: 모바일에서는 좌우 패딩을 px-4 정도로 콤팩트하게 줄이고, PC 화면(md: 이상)에서만 넉넉한 패딩이 들어가도록 반응형 클래스를 구성해줘.</pre>
 </div>
-
-```plain text
-너는 모바일 퍼스트(Mobile-First) 반응형 웹 UI/UX 전문 디자이너 겸 프론트엔드 엔지니어야.
-우리 루틴메이트 앱을 모바일 기기(아이폰, 갤럭시 화면 너비 360px~412px)에서 검수했더니 몇 가지 문제가 보여.
-Tailwind CSS를 사용해서 완벽한 모바일 최적화를 적용해줘.
-
-[수정 가이드라인]
-1. [가로 스크롤 완전 차단]: 최상위 레이아웃 컨테이너에 overflow-x-hidden 및 w-full max-w-md mx-auto를 적용해서 스마트폰 폭 안에 쏙 들어오게 해줘.
-2. [습관 카드 반응형 최적화]:
-   - 긴 텍스트 입력 시 카드가 깨지지 않도록 습관 제목에 truncate 또는 break-keep 속성을 부여해줘.
-   - 체크박스와 완료 버튼은 모바일 엄지손가락 터치가 편하도록 최소 44px x 44px 이상의 터치 타깃 영역(p-2 등)을 확보해줘.
-3. [여백 다이어트]: 모바일에서는 좌우 패딩을 px-4 정도로 콤팩트하게 줄이고, PC 화면(md: 이상)에서만 넉넉한 패딩이 들어가도록 반응형 클래스를 구성해줘.
-```
 ---
 ## 4. 👀 [검수 기준] 성공 체크리스트
 - [ ] 크롬 `Ctrl + Shift + M` 모바일 화면에서 화면이 좌우로 흔들리지 않고 가로 스크롤이 완전히 박멸되었는가?
@@ -78,7 +65,3 @@ Tailwind CSS를 사용해서 완벽한 모바일 최적화를 적용해줘.
   </div>
   <pre id="cmd-ch26-snapshot" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">git fetch origin && git reset --hard origin/snapshot-part-08</pre>
 </div>
-
-```bash
-git fetch origin && git reset --hard origin/snapshot-part-08
-```

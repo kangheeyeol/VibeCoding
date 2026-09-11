@@ -38,13 +38,6 @@ Tailwind의 transition-colors duration-200을 적용해서
 초록색으로 부드럽게 물들듯이 바뀌도록 효과를 추가해줘.</pre>
 </div>
 
-```plain text
-@RoutineCard.tsx 파일 확인해줘.
-현재 체크박스를 누를 때 색깔이 즉시 변하는데, 
-Tailwind의 transition-colors duration-200을 적용해서 
-초록색으로 부드럽게 물들듯이 바뀌도록 효과를 추가해줘.
-```
-
 > 💡 **효과**: 불필요한 전체 파일 탐색을 방지하여 응답 속도가 3배 빨라지고, 소모되는 AI 토큰 비용을 90% 이상 획기적으로 아낄 수 있습니다.
 ---
 ---

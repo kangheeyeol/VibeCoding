@@ -33,11 +33,6 @@ AI가 기억할 수 있는 용량(컨텍스트 윈도우)은 커다란 **'교실
   <pre id="prompt-ch11-new-turn" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">@SPEC.md 확인하고, 이번엔 F-03번 기능인 '습관 등록 모달 창'을 만들 차례야. 
 현재 코드를 확인하고 필요한 컴포넌트를 설계해줘.</pre>
 </div>
-
-```plain text
-@SPEC.md 확인하고, 이번엔 F-03번 기능인 '습관 등록 모달 창'을 만들 차례야. 
-현재 코드를 확인하고 필요한 컴포넌트를 설계해줘.
-```
 이렇게 하면 AI는 이전 대화의 쓰레기 기억 없이, **맑고 깨끗한 뇌로 다음 기능을 완벽하게 구현**합니다.
 ---
 ---

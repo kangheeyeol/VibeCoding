@@ -33,21 +33,6 @@ Cursor 에디터에서 새 대화창(`Ctrl + L`)을 열고, 모델을 **Claude 3
    - 체크 해제 시: 해당 habit_id와 오늘 날짜에 해당하는 'habit_logs' 데이터를 delete
 6. 데이터 통신 중 오류가 발생하면 사용자에게 친절한 토스트 메시지를 띄우고, 로딩 중에는 자연스러운 스켈레톤(Skeleton) UI를 보여줘.</pre>
 </div>
-
-```plain text
-너는 Next.js 14(App Router)와 Supabase 연동 전문 풀스택 개발자야.
-우리 루틴메이트 프로젝트의 습관 데이터를 실제 Supabase 클라우드 DB와 실시간 연동하려 해.
-
-[작업 가이드라인]
-1. @.env.local 의 환경변수(NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY)를 읽어와서 Supabase 클라이언트를 생성하는 lib/supabase.ts 파일을 만들어줘. (@supabase/supabase-js 라이브러리 사용)
-2. 현재 @app/page.tsx 및 관련 컴포넌트에서 하드코딩된 mock 데이터를 모두 걷어내줘.
-3. [습관 목록 불러오기]: 페이지가 로드될 때 Supabase의 'habits' 테이블에서 전체 습관 목록을 가져오고, 오늘 날짜로 완료된 기록을 'habit_logs'에서 조회해 체크 여부를 표시해줘.
-4. [새 습관 추가]: 습관 추가 모달에서 입력 후 저장 버튼을 누르면 Supabase 'habits' 테이블에 새 row를 insert하고 화면에 즉시 반영해줘.
-5. [완료 체크/해제 토글]: 습관 카드의 체크박스를 클릭하면:
-   - 체크 시: 'habit_logs' 테이블에 { habit_id, completed_at: 오늘날짜 } 데이터를 insert
-   - 체크 해제 시: 해당 habit_id와 오늘 날짜에 해당하는 'habit_logs' 데이터를 delete
-6. 데이터 통신 중 오류가 발생하면 사용자에게 친절한 토스트 메시지를 띄우고, 로딩 중에는 자연스러운 스켈레톤(Skeleton) UI를 보여줘.
-```
 프롬프트 입력 후 AI가 코드를 작성하기 시작하면, 변경 사항을 검토하고 우측의 **[Accept]** (또는 `Ctrl + Enter`)를 눌러 적용합니다.
 ---
 ## 4. 👀 [검수 기준] 성공 체크리스트 (3대 영구 보존 테스트)
@@ -69,10 +54,6 @@ Cursor 에디터에서 새 대화창(`Ctrl + L`)을 열고, 모델을 **Claude 3
   </div>
   <pre id="cmd-ch23-npminstall" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">npm install @supabase/supabase-js</pre>
 </div>
-
-```bash
-npm install @supabase/supabase-js
-```
 	3. 설치가 완료된 후 다시 브라우저를 새로고침하면 거짓말처럼 정상 동작합니다!
 ---
 ## 6. 🛡️ [세이프티넷] 이번 챕터 공식 완성본 링크
@@ -86,7 +67,3 @@ npm install @supabase/supabase-js
   </div>
   <pre id="cmd-ch23-snapshot" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">git fetch origin && git reset --hard origin/snapshot-part-07</pre>
 </div>
-
-```bash
-git fetch origin && git reset --hard origin/snapshot-part-07
-```

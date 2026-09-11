@@ -52,21 +52,6 @@ Cursor(`Ctrl + L` 또는 `Ctrl + I`)나 웹 AI 빌더(v0, Bolt, Lovable) 채팅�
 4. 모서리 및 그림자: 모든 카드와 버튼은 rounded-2xl과 shadow-sm으로 부드러운 인상을 줘.</pre>
 </div>
 
-```plain text
-너는 수상 경력이 있는 시니어 UI/UX 디자이너야.
-루틴메이트의 전체 디자인 테마를 실리콘밸리 테크 스타트업 수준으로 리디자인해줘.
-
-[디자인 헌법]
-1. 프레임워크: Tailwind CSS 및 shadcn/ui 미니멀리즘 스타일 적용
-2. 컬러 팔레트:
-   - 전체 배경: bg-slate-50 (눈이 편안한 밝은 그레이)
-   - 카드 배경: bg-white (순백색)
-   - 테두리선: border-slate-200 (아주 얇고 정갈한 선)
-   - 메인 포인트: emerald-600 (신뢰감을 주는 숲속 에메랄드)
-3. 타이포그래피: 폰트는 가독성 높은 산세리프 폰트를 쓰고, 제목은 font-bold text-slate-800, 부제목은 text-sm text-slate-500으로 대비를 줘.
-4. 모서리 및 그림자: 모든 카드와 버튼은 rounded-2xl과 shadow-sm으로 부드러운 인상을 줘.
-```
-
 ---
 
 ## 5. 👀 [검수 기준] 디자인 완성도 체크리스트
@@ -89,10 +74,6 @@ AI 모델이 기본 HTML 버튼(`button`)에 스타일을 충분히 입히지 �
   </div>
   <pre id="prompt-ch07-button-fix" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">버튼 스타일이 너무 원색적이고 촌스러워. 기본 HTML 버튼 대신, shadcn/ui 스타일의 bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-4 rounded-xl transition-all 적용으로 세련되게 바꿔줘.</pre>
 </div>
-
-```plain text
-버튼 스타일이 너무 원색적이고 촌스러워. 기본 HTML 버튼 대신, shadcn/ui 스타일의 bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-4 rounded-xl transition-all 적용으로 세련되게 바꿔줘.
-```
 
 ---
 

@@ -18,10 +18,6 @@
   </div>
   <pre id="cmd-appc-reset" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">git fetch origin && git reset --hard origin/snapshot-part-09</pre>
 </div>
-
-```bash
-git fetch origin && git reset --hard origin/snapshot-part-09
-```
 ---
 ### ⌨️ Cursor 에디터 핵심 단축키 7선
 

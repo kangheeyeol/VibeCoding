@@ -34,14 +34,6 @@ NEXT_PUBLIC_SUPABASE_URL = https://여러분의_Supabase_URL.supabase.co
 # Key 2
 NEXT_PUBLIC_SUPABASE_ANON_KEY = 여러분의_긴_anon_public_키</pre>
 </div>
-
-```bash
-# Key 1
-NEXT_PUBLIC_SUPABASE_URL = https://여러분의_Supabase_URL.supabase.co
-
-# Key 2
-NEXT_PUBLIC_SUPABASE_ANON_KEY = 여러분의_긴_anon_public_키
-```
 ### Step 4. 배포 버튼 누르고 축하 파티 즐기기!
 - 하단의 검은색 **[Deploy]** 버튼을 힘차게 클릭합니다!
 - 약 40초~1분 동안 Vercel이 코드를 빌드하고 전 세계 CDN 서버로 복사합니다.

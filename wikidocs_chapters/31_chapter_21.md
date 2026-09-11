@@ -49,11 +49,6 @@
   <pre id="conf-ch21-env" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">NEXT_PUBLIC_SUPABASE_URL=https://여러분의프로젝트ID.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.여러분의anon키...</pre>
 </div>
-
-```bash
-NEXT_PUBLIC_SUPABASE_URL=https://여러분의프로젝트ID.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.여러분의anon키...
-```
 > 💡 **비개발자 팁**: `.env.local` 파일은 외부나 GitHub에 절대 업로드되지 않는 내 컴퓨터만의 1급 비밀 금고입니다.
 ---
 ## 4. 👀 [검수 기준] 성공 체크리스트
