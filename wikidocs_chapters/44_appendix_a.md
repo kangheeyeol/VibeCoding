@@ -1,15 +1,37 @@
 # 부록 A. 복사해서 바로 쓰는 상황별 바이브 코딩 프롬프트 10선
 
-Cursor AI 채팅창(`Ctrl + L` 또는 `Ctrl + I`)에 복사해서 바로 사용할 수 있는 실전 마법 지시서 모음입니다.  
-각 상황에 맞는 프롬프트 상단의 **[📋 프롬프트 복사하기]** 버튼을 누르면 원클릭으로 클립보드에 복사됩니다.
+Cursor AI 채팅창(`Ctrl + L`)이나 Composer(`Ctrl + I`)에 복사해서 바로 사용할 수 있는 실전 마법 지시서 모음입니다.  
+설명과 프롬프트 본문이 완벽하게 분리되어 있어, 각 상황에 맞는 카드의 **[📋 프롬프트 복사하기]** 버튼을 누르면 원클릭으로 클립보드에 복사됩니다.
 
 ---
 
-### 1. [기능 추가] SPEC 기반 무결점 신규 기능 개발
+## 📌 [빠른 인덱스] 상황별 프롬프트 10선 치트시트
 
-- **💡 언제 쓰는가?**: 기획서(`SPEC.md`)에 정의된 새로운 단위 기능을 추가할 때 사용합니다. 기존 코드를 망가뜨리지 않고 안전하게 새 부품을 조립시킵니다.
+| 번호 | 실전 상황 | 추천 창구 | 핵심 과업 | 바로가기 |
+| :---: | :--- | :---: | :--- | :---: |
+| **01** | **신규 기능 추가** | `Ctrl + I` | SPEC 기반 기존 코드 보존 신규 기능 추가 | [이동](#1-기능-추가-spec-기반-무결점-신규-기능-개발) |
+| **02** | **디자인 리뉴얼** | `Ctrl + L` | 2026 테크 스타트업 모던 미니멀리즘 스타일링 | [이동](#2-디자인-개편-트렌디하고-세련된-모던-ui-리뉴얼) |
+| **03** | **버그/에러 박멸** | `Ctrl + L` | 빨간 에러 원인 분석 및 최소 패치 | [이동](#3-버그-박멸-에러-로그-원클릭-진단-및-최소-패치) |
+| **04** | **300줄 모듈화** | `Ctrl + I` | 비대해진 파일 300줄 단위 레고 블록 분리 | [이동](#4-모듈화-뚱뚱해진-파일-날씬하게-쪼개기-300줄의-법칙) |
+| **05** | **클린 리팩토링** | `Ctrl + L` | 쓰레기 코드/콘솔로그 청소 및 한국어 주석 | [이동](#5-정기-대청소-불필요한-코드-및-중복-제거-리팩토링) |
+| **06** | **모바일 반응형** | `Ctrl + L` | 가로 스크롤 완전 차단 및 44px 터치 영역 확보 | [이동](#6-모바일-최적화-스마트폰-가로-스크롤-박멸-및-반응형-수리) |
+| **07** | **Supabase 연동** | `Ctrl + I` | 가짜 목데이터를 실제 클라우드 DB로 전환 | [이동](#7-db-연동-supabase-테이블-데이터-실시간-crud-연결) |
+| **08** | **Vercel 사전 빌드** | `Ctrl + L` | npm run build 100% 단번에 통과 검사 | [이동](#8-배포-사전-점검-vercel-배포-실패-방지-최종-빌드-검사) |
+| **09** | **PWA 웹 앱 설치** | `Ctrl + I` | 홈 화면 설치형 manifest.json 및 아이콘 세팅 | [이동](#9-pwa-스마트폰-홈-화면-설치형-앱-매니페스트-설정) |
+| **10** | **v2.0 기획 회의** | `Ctrl + L` | 사용자 피드백을 차기 명세서(SPEC-v2.0)로 전환 | [이동](#10-차기-기획-회의-사용자-피드백을-v20-스펙-문서로-전환) |
 
-<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+---
+
+## 1. [기능 추가] SPEC 기반 무결점 신규 기능 개발
+
+### 🎯 디렉터 가이드
+- **언제 쓰는가?**: 기획서(`SPEC.md`)에 명시된 새로운 단위 기능(예: 습관 정렬, 검색창, 통계 위젯 등)을 추가할 때 사용합니다.
+- **입력 위치**: Cursor Composer (`Ctrl + I`) 또는 새 대화창 (`Ctrl + L`)
+- **디렉터 팁**: 기존의 잘 돌아가는 코드와 UI를 건드리지 못하도록 울타리를 쳐주는 것이 핵심입니다. 프롬프트 내 `[{구현할 기능 이름}]` 부분을 본인의 요구사항으로 바꿔주세요.
+
+### 📋 [복사 전용] 신규 기능 개발 지시서
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
     <span style="font-weight: 700; color: #0f172a; font-size: 14px;">✨ [프롬프트 1] SPEC 기반 신규 기능 개발 지시서</span>
     <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-appa-01').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
@@ -24,35 +46,49 @@ Cursor AI 채팅창(`Ctrl + L` 또는 `Ctrl + I`)에 복사해서 바로 사용�
 4. 구현 완료 후 어떤 파일이 추가/수정되었는지 3줄로 요약해줘.</pre>
 </div>
 
+> **👀 [검수 포인트]:** AI가 기존 `app/page.tsx` 코드를 통째로 갈아엎지 않고, `components/` 폴더에 새 컴포넌트를 분리해서 import했는지 확인하세요.
+
 ---
 
-### 2. [디자인 개편] 트렌디하고 세련된 모던 UI 리뉴얼
+## 2. [디자인 개편] 트렌디하고 세련된 모던 UI 리뉴얼
 
-- **💡 언제 쓰는가?**: 프로토타입 디자인이 너무 밋밋하거나 투박할 때, 실리콘밸리 테크 기업 수준의 감각적인 스타일로 한 번에 탈바꿈시킵니다.
+### 🎯 디렉터 가이드
+- **언제 쓰는가?**: 프로토타입 디자인이 너무 밋밋하거나 투박할 때, 실리콘밸리 테크 기업 수준의 감각적인 스타일로 한 번에 탈바꿈시킵니다.
+- **입력 위치**: Cursor Chat (`Ctrl + L`)
+- **디렉터 팁**: 단순히 "예쁘게 해줘"라고 하면 망합니다. 둥근 모서리(`rounded-2xl`), 은은한 그림자(`shadow-sm`), 슬레이트 배경(`bg-slate-50`)의 명확한 테마를 제시하세요.
 
-<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+### 📋 [복사 전용] 트렌디 모던 UI/UX 리뉴얼 지시서
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
     <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🎨 [프롬프트 2] 트렌디 모던 UI/UX 리뉴얼 지시서</span>
     <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-appa-02').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
   </div>
   <pre id="prompt-appa-02" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">너는 최고 수준의 UI/UX 디자이너 겸 Tailwind CSS 전문가야.
-현재 @page.tsx (또는 해당 컴포넌트)의 디자인이 너무 밋밋하고 투박해.
+현재 @app/page.tsx (또는 해당 컴포넌트)의 디자인이 너무 밋밋하고 투박해.
 Linear, Notion, Apple 스타일의 세련된 모던 미니멀리즘 디자인으로 리뉴얼해줘.
 
 [디자인 요구사항]
 - 둥근 모서리(rounded-2xl)와 은은한 그림자(shadow-sm hover:shadow-md) 적용
-- 차분하고 고급스러운 배경색(bg-slate-50 또는 dark 모드 고려)과 포인트 컬러 활용
+- 차분하고 고급스러운 배경색(bg-slate-50)과 에메랄드(emerald-600) 포인트 컬러 활용
 - 버튼과 카드에 마우스를 올렸을 때 부드러운 호버 애니메이션(transition-all duration-200) 추가
 - 텍스트 가독성을 위해 적절한 폰트 굵기(font-medium)와 자간, 여백을 최적화해줘.</pre>
 </div>
 
+> **👀 [검수 포인트]:** 브라우저 화면에서 버튼에 마우스를 올렸을 때 은은하게 밝아지는 손맛과 세련된 카드 곡률이 유지되는지 확인하세요.
+
 ---
 
-### 3. [버그 박멸] 에러 로그 원클릭 진단 및 최소 패치
+## 3. [버그 박멸] 에러 로그 원클릭 진단 및 최소 패치
 
-- **💡 언제 쓰는가?**: 터미널이나 브라우저에 빨간 에러 메시지가 떴을 때 사용합니다. 원인 분석과 다른 파일에 영향을 주지 않는 최소 교체 코드를 받아냅니다.
+### 🎯 디렉터 가이드
+- **언제 쓰는가?**: 터미널이나 브라우저 화면에 빨간 에러 메시지가 떴을 때 사용합니다.
+- **입력 위치**: Cursor Chat (`Ctrl + L`)
+- **디렉터 팁**: 에러 문구 전체를 그대로 복사하여 `{여기에 복사한 빨간 에러 메시지를 붙여넣으세요}` 자리에 채워 넣으세요.
 
-<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+### 📋 [복사 전용] 에러 로그 원클릭 진단 및 최소 패치 지시서
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
     <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🚨 [프롬프트 3] 에러 로그 원클릭 진단 및 최소 패치 지시서</span>
     <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-appa-03').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
@@ -65,16 +101,23 @@ Linear, Notion, Apple 스타일의 세련된 모던 미니멀리즘 디자인으
 
 1. 비개발자 디렉터의 눈높이에서 이 문제가 왜 생겼는지 일상 비유로 1줄 요약해줘.
 2. 어느 파일 몇 번째 줄이 문제인지 명시해줘.
-3. 다른 기능에 영향을 주지 않는 가장 안전하고 최소한의 수정 코드(Patch)를 제안해줘.</pre>
+3. 다른 정상 기능에 영향을 주지 않는 가장 안전하고 최소한의 수정 코드(Patch)를 제안해줘.</pre>
 </div>
+
+> **👀 [검수 포인트]:** AI가 전체 파일을 덤프하지 않고 문제가 된 10~20줄만 콕 집어서 교체 코드를 제시하는지 확인하세요.
 
 ---
 
-### 4. [모듈화] 뚱뚱해진 파일 날씬하게 쪼개기 (300줄의 법칙)
+## 4. [모듈화] 뚱뚱해진 파일 날씬하게 쪼개기 (300줄의 법칙)
 
-- **💡 언제 쓰는가?**: 특정 코드 파일이 250~300줄을 넘겨 스크롤이 길어지고 버그가 발생하기 시작할 때 사용합니다.
+### 🎯 디렉터 가이드
+- **언제 쓰는가?**: 특정 코드 파일이 250~300줄을 넘겨 스크롤이 길어지고 버그가 발생하기 시작할 때 사용합니다.
+- **입력 위치**: Cursor Composer (`Ctrl + I`)
+- **디렉터 팁**: 프롬프트의 `@{파일명}` 부분에 `@app/page.tsx` 등 쪼개고자 하는 대상 파일을 멘션하세요.
 
-<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+### 📋 [복사 전용] 300줄의 법칙 모듈화 분리 지시서
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
     <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🧩 [프롬프트 4] 300줄의 법칙 모듈화 분리 지시서</span>
     <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-appa-04').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
@@ -85,16 +128,23 @@ Linear, Notion, Apple 스타일의 세련된 모던 미니멀리즘 디자인으
 1. 역할별로 100~200줄 내외의 독립 컴포넌트를 components/ 폴더 아래에 각각 생성해줘.
 2. 부모-자식 간에 필요한 데이터(Props)를 명확한 TypeScript 인터페이스로 전달해줘.
 3. 기존 파일은 분리된 컴포넌트들을 import하여 조립만 담당하는 가벼운 컨테이너 형태로 만들어줘.
-4. 사용자 관점에서의 화면 모양과 동작은 100% 동일해야 해.</pre>
+4. 사용자 관점에서의 화면 모양과 동작은 이전과 100% 완벽히 동일해야 해.</pre>
 </div>
+
+> **👀 [검수 포인트]:** 분리 후 원본 파일의 길이가 200줄 이내로 홀쭉해졌는지 줄 번호를 확인하세요.
 
 ---
 
-### 5. [정기 대청소] 불필요한 코드 및 중복 제거 (리팩토링)
+## 5. [정기 대청소] 불필요한 코드 및 중복 제거 (리팩토링)
 
-- **💡 언제 쓰는가?**: 새 기능을 3개 정도 추가했거나 다음 파트로 넘어가기 전, 프로젝트 전체를 깔끔하게 정돈할 때 사용합니다.
+### 🎯 디렉터 가이드
+- **언제 쓰는가?**: 새 기능을 2~3개 추가했거나 다음 파트로 넘어가기 전, 프로젝트 전체를 깔끔하게 정돈할 때 사용합니다.
+- **입력 위치**: Cursor Chat (`Ctrl + L`)
+- **디렉터 팁**: 기능 변경 없이 쓰레기 코드(안 쓰는 import, console.log)를 청소하고 한국어 주석을 달도록 지시합니다.
 
-<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+### 📋 [복사 전용] 클린 코드 정기 대청소(리팩토링) 지시서
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
     <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🧹 [프롬프트 5] 클린 코드 정기 대청소(리팩토링) 지시서</span>
     <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-appa-05').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
@@ -107,13 +157,20 @@ Linear, Notion, Apple 스타일의 세련된 모던 미니멀리즘 디자인으
 3. 비개발자도 코드를 읽기 쉽도록 핵심 로직마다 친절한 한국어 한 줄 주석을 달아줘.</pre>
 </div>
 
+> **👀 [검수 포인트]:** 코드 사이사이에 직관적인 한 줄 한국어 주석이 예쁘게 달렸는지 확인하세요.
+
 ---
 
-### 6. [모바일 최적화] 스마트폰 가로 스크롤 박멸 및 반응형 수리
+## 6. [모바일 최적화] 스마트폰 가로 스크롤 박멸 및 반응형 수리
 
-- **💡 언제 쓰는가?**: 모바일 화면에서 양옆으로 기분 나쁜 스크롤이 생기거나 글자가 카드 밖으로 삐져나갈 때 사용합니다.
+### 🎯 디렉터 가이드
+- **언제 쓰는가?**: 모바일 화면에서 양옆으로 기분 나쁜 스크롤이 생기거나 글자가 카드 밖으로 삐져나갈 때 사용합니다.
+- **입력 위치**: Cursor Chat (`Ctrl + L`)
+- **디렉터 팁**: 가로 스크롤 완전 차단(`overflow-x-hidden`)과 44px 터치 영역 확보를 명확히 못 박습니다.
 
-<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+### 📋 [복사 전용] 모바일 반응형 및 가로 스크롤 완전 박멸 지시서
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
     <span style="font-weight: 700; color: #0f172a; font-size: 14px;">📱 [프롬프트 6] 모바일 반응형 및 가로 스크롤 완전 박멸 지시서</span>
     <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-appa-06').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
@@ -126,13 +183,20 @@ Tailwind CSS의 모바일 퍼스트 원칙을 적용해 완벽히 수리해줘.
 3. 긴 텍스트가 들어왔을 때 카드가 찌그러지지 않도록 말줄임(truncate) 또는 자연스러운 줄바꿈을 적용해줘.</pre>
 </div>
 
+> **👀 [검수 포인트]:** 크롬 모바일 뷰(`Ctrl + Shift + M`)에서 마우스로 화면을 좌우로 밀어도 화면이 흔들리지 않는지 확인하세요.
+
 ---
 
-### 7. [DB 연동] Supabase 테이블 데이터 실시간 CRUD 연결
+## 7. [DB 연동] Supabase 테이블 데이터 실시간 CRUD 연결
 
-- **💡 언제 쓰는가?**: 가짜 임시 목데이터를 실제 Supabase 클라우드 데이터베이스와 연결해 영구 저장시킬 때 사용합니다.
+### 🎯 디렉터 가이드
+- **언제 쓰는가?**: 가짜 임시 목데이터를 실제 Supabase 클라우드 데이터베이스와 연결해 영구 저장시킬 때 사용합니다.
+- **입력 위치**: Cursor Composer (`Ctrl + I`)
+- **디렉터 팁**: 프롬프트의 `{테이블명}` 자리에 본인의 Supabase 테이블 이름(예: `habits`)을 기입하세요.
 
-<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+### 📋 [복사 전용] Supabase 실시간 CRUD 연동 지시서
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
     <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🗄️ [프롬프트 7] Supabase 실시간 CRUD 연동 지시서</span>
     <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-appa-07').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
@@ -146,44 +210,74 @@ Tailwind CSS의 모바일 퍼스트 원칙을 적용해 완벽히 수리해줘.
 5. 로딩 중일 때는 깜빡임 없는 스켈레톤 UI를 보여주고, 통신 에러 발생 시 부드러운 안내 메시지를 띄워줘.</pre>
 </div>
 
+> **👀 [검수 포인트]:** 새 데이터를 입력하고 새로고침(`F5`)을 눌러도 데이터가 날아가지 않고 유지되는지 확인하세요.
+
 ---
 
-### 8. [배포 사전 점검] Vercel 배포 실패 방지 최종 빌드 검사
+## 8. [배포 사전 점검] Vercel 배포 실패 방지 최종 빌드 검사
 
-- **💡 언제 쓰는가?**: Vercel에 코드를 배포하기 직전, 터미널에서 `npm run build`가 100% 무결점으로 통과하도록 점검할 때 사용합니다.
+### 🎯 디렉터 가이드
+- **언제 쓰는가?**: Vercel에 코드를 배포하기 직전, 터미널에서 `npm run build`가 100% 무결점으로 통과하도록 점검할 때 사용합니다.
+- **입력 위치**: Cursor Chat (`Ctrl + L`)
+- **디렉터 팁**: Vercel 배포 실패의 90%는 TypeScript 엄격 모드 때문입니다. AI에게 사전에 빌드 통과 무결점 패치를 맡기세요.
 
-<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+### 📋 [복사 전용] 배포 전 최종 빌드 무결점 검사 지시서
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
     <span style="font-weight: 700; color: #0f172a; font-size: 14px;">🏗️ [프롬프트 8] 배포 전 최종 빌드 무결점 검사 지시서</span>
     <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-appa-08').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
   </div>
   <pre id="prompt-appa-08" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">우리 프로젝트를 Vercel에 정식 배포하기 직전이야.
-터미널에서 `npm run build`를 실행했을 때 단 하나의 Type Error나 Warning 없이 100% 한 번에 통과할 수 있도록 전체 프로젝트 코드를 점검하고 완벽히 다듬어줘.</pre>
+터미널에서 `npm run build`를 실행했을 때 단 하나의 Type Error나 ESLint Warning 없이 100% 한 번에 통과할 수 있도록 전체 프로젝트 코드를 점검하고 완벽히 다듬어줘:
+
+1. 미사용 import문 및 미선언 변수들을 깨끗하게 정리해줘.
+2. 부모-자식 간 Props 타입 불일치 및 any 타입으로 방치된 곳을 엄격하게 선언해줘.
+3. Next.js 빌드 엔진이 요구하는 빌드 환경 무결성을 100% 맞춰줘.</pre>
 </div>
+
+> **👀 [검수 포인트]:** 로컬 터미널에서 `npm run build`를 직접 실행했을 때 초록색 `✓ Compiled successfully`가 뜨는지 확인하세요.
 
 ---
 
-### 9. [PWA] 스마트폰 홈 화면 설치형 앱 매니페스트 설정
+## 9. [PWA] 스마트폰 홈 화면 설치형 앱 매니페스트 설정
 
-- **💡 언제 쓰는가?**: 앱스토어 등록 없이 내 웹 서비스를 모바일 홈 화면에 앱 아이콘 형태로 설치시키고 싶을 때 사용합니다.
+### 🎯 디렉터 가이드
+- **언제 쓰는가?**: 앱스토어 심사 없이 내 웹 서비스를 스마트폰 홈 화면에 진짜 앱 아이콘 형태로 설치시키고 싶을 때 사용합니다.
+- **입력 위치**: Cursor Composer (`Ctrl + I`)
+- **디렉터 팁**: `manifest.json` 생성과 함께 모바일 상단 상태바 색상(`theme_color`) 및 홈 화면 아이콘 링크를 자동 연동합니다.
 
-<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+### 📋 [복사 전용] PWA 웹 앱 매니페스트 자동 설정 지시서
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
     <span style="font-weight: 700; color: #0f172a; font-size: 14px;">📲 [프롬프트 9] PWA 웹 앱 매니페스트 자동 설정 지시서</span>
     <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-appa-09').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
   </div>
-  <pre id="prompt-appa-09" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">우리 웹 서비스를 사용자들이 스마트폰 홈 화면에 진짜 앱(App)처럼 설치할 수 있도록 PWA(Progressive Web App)를 세팅해줘.
-- public/manifest.json 생성 (이름, 아이콘 경로, 테마 색상, display: standalone 설정)
-- app/layout.tsx에 필요한 meta 태그 및 아이폰용 apple-touch-icon 링크 삽입</pre>
+  <pre id="prompt-appa-09" style="background-color: #0f172a; color: #f8fafc; border-radius: 8px; padding: 16px; font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; margin: 0;">우리 웹 서비스를 사용자들이 스마트폰 홈 화면에 진짜 앱(App)처럼 설치할 수 있도록 PWA(Progressive Web App)를 세팅해줘:
+
+1. public/manifest.json 생성:
+   - 이름(name), 짧은 이름(short_name), 시작 경로(start_url: "/"), 디스플레이 모드(display: "standalone")
+   - 테마 컬러(theme_color) 및 배경색(background_color)
+2. app/layout.tsx 메타데이터 수정:
+   - manifest.json 링크 및 아이폰 사파리용 apple-touch-icon 메타 태그 삽입
+3. 모바일 브라우저 주소창이 사라지고 전체 화면 앱으로 동작하게 해줘.</pre>
 </div>
+
+> **👀 [검수 포인트]:** 스마트폰 브라우저에서 '홈 화면에 추가'를 눌렀을 때 앱 아이콘이 생성되고 주소창 없이 앱처럼 열리는지 확인하세요.
 
 ---
 
-### 10. [차기 기획 회의] 사용자 피드백을 v2.0 스펙 문서로 전환
+## 10. [차기 기획 회의] 사용자 피드백을 v2.0 스펙 문서로 전환
 
-- **💡 언제 쓰는가?**: 서비스 론칭 후 모인 실제 사용자 피드백을 우선순위별로 정렬하여 차기 버전 명세서(`SPEC-v2.0.md`)로 도출할 때 사용합니다.
+### 🎯 디렉터 가이드
+- **언제 쓰는가?**: 서비스 론칭 후 모인 실제 사용자 피드백을 우선순위별로 정렬하여 차기 버전 명세서(`SPEC-v2.0.md`)로 도출할 때 사용합니다.
+- **입력 위치**: Cursor Chat (`Ctrl + L`)
+- **디렉터 팁**: 프롬프트 내 `[{사용자 피드백 내용}]` 자리에 설문지나 카카오톡으로 받은 사용자들의 실제 목소리를 자유롭게 붙여넣으세요.
 
-<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 14px 0 16px 0;">
+### 📋 [복사 전용] 사용자 피드백 기반 v2.0 스펙 전환 회의 지시서
+
+<div style="background-color: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px 20px; margin: 16px 0;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
     <span style="font-weight: 700; color: #0f172a; font-size: 14px;">💡 [프롬프트 10] 사용자 피드백 기반 v2.0 스펙 전환 회의 지시서</span>
     <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-appa-10').innerText); this.innerText='✅ 복사 완료!'; setTimeout(() => this.innerText='📋 프롬프트 복사하기', 2000);" style="background-color: #059669; color: #ffffff; border: none; padding: 7px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 프롬프트 복사하기</button>
@@ -195,4 +289,4 @@ Tailwind CSS의 모바일 퍼스트 원칙을 적용해 완벽히 수리해줘.
 기존 @SPEC.md 를 기반으로 가장 시급하고 중요한 개선 과제 2가지를 도출하고, 이를 명세화한 [SPEC-v2.0.md] 초안을 작성해줘.</pre>
 </div>
 
----
+> **👀 [검수 포인트]:** AI가 제시한 `SPEC-v2.0.md` 파일에 요구사항(User Stories)과 데이터 모델 변경점이 일목요연하게 정리되었는지 확인하세요.
