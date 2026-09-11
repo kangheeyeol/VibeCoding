@@ -24,7 +24,7 @@
 | 06 | **Part 2. 기획의 정석 (SDD)** | [Part 2. 기획의 정석 (SDD)] 개요 및 로드맵 | [`06_part2_overview.md`](./06_part2_overview.md) | 274자 |
 | 07 | **Part 2. 기획의 정석 (SDD)** | Chapter 04. 망하는 프롬프트 vs 흥하는 프롬프트 (목표, 제약조건, 페르소나, 출력형식) | [`07_chapter_04.md`](./07_chapter_04.md) | 1,932자 |
 | 08 | **Part 2. 기획의 정석 (SDD)** | Chapter 05. 단 하나의 진실의 원천: AI의 기억상실증을 치료하는 `SPEC.md` 작성법 | [`08_chapter_05.md`](./08_chapter_05.md) | 1,082자 |
-| 09 | **Part 2. 기획의 정석 (SDD)** | Chapter 06. [실습] 루틴메이트 전용 한 장짜리 PRD(제품 요구사항 정의서) 작성하기 | [`09_chapter_06.md`](./09_chapter_06.md) | 3,333자 |
+| 09 | **Part 2. 기획의 정석 (SDD)** | Chapter 06. [실습] 루틴메이트 전용 한 장짜리 PRD(제품 요구사항 정의서) 작성하기 | [`09_chapter_06.md`](./09_chapter_06.md) | 9,073자 |
 | 10 | **Part 2. 기획의 정석 (SDD)** | Chapter 07. 감각이 없어도 전문가처럼: 디자인 시스템(Tailwind, shadcn/ui) 한 번에 입히기 | [`10_chapter_07.md`](./10_chapter_07.md) | 2,775자 |
 | 11 | **Part 3. 작업실 세팅** | [Part 3. 작업실 세팅] 개요 및 로드맵 | [`11_part3_overview.md`](./11_part3_overview.md) | 235자 |
 | 12 | **Part 3. 작업실 세팅** | Chapter 08. 비개발자를 위한 3분 설치 가이드 (VS Code, Cursor, Node.js) | [`12_chapter_08.md`](./12_chapter_08.md) | 1,595자 |
