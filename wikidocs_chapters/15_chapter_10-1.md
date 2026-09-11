@@ -51,4 +51,4 @@ npm run dev
 	2. 터미널에 적힌 주소(`localhost:3001` 등)를 확인하고 그 주소로 브라우저에 접속하시면 정상 작동합니다.
 ---
 ## 7. 🛡️ [세이프티넷] 공식 템플릿
-- 🔗 [공식 템플릿 저장소 원본 보기 (](https://github.com/kangheeyeol/VibeCoding)[`main`](https://github.com/kangheeyeol/VibeCoding)[ 브랜치)](https://github.com/kangheeyeol/VibeCoding)
+- 🔗 [루틴메이트 공식 템플릿 저장소 원본 보기 (main 브랜치)](https://github.com/kangheeyeol/VibeCoding)

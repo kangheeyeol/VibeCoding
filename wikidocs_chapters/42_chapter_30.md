@@ -53,5 +53,5 @@
 > **여러분의 훌륭한 바이브(Vibe)가 세상을 바꾸는 소프트웨어가 될 것입니다.**
 ---
 ## 5. 🛡️ [세이프티넷] 다음 여정을 위한 커뮤니티
-- 🔗 [바이브 코딩 공식 디스코드 커뮤니티 참여하기](https://discord.gg/vibe-coding-lab)  
+- 🔗 [바이브 코딩 공식 GitHub Q&A 및 이슈 등록하기](https://github.com/kangheeyeol/VibeCoding/issues)  
 - 🔗 [전체 완성 프로젝트 GitHub 리포지토리 최종 Star 누르기](https://github.com/kangheeyeol/VibeCoding)

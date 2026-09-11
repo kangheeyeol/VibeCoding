@@ -83,7 +83,7 @@ AI가 작성을 마치고 화면을 렌더링하면, 디렉터의 눈으로 다�
 	```
 ---
 ## 6. 🛡️ [세이프티넷] 이번 챕터 공식 완성본 링크
-- 🔗 [공식 GitHub 저장소: ](https://github.com/vibe-coding-lab/routinemate-starter/tree/ch02-web-prototype)[`ch02-web-prototype`](https://github.com/vibe-coding-lab/routinemate-starter/tree/ch02-web-prototype)[ 완성본 브랜치 열기](https://github.com/vibe-coding-lab/routinemate-starter/tree/ch02-web-prototype)
-- 🌐 [Chapter 02 웹 프로토타입 라이브 체험 데모 링크](https://bolt.new)
+- 🔗 [루틴메이트 공식 GitHub: ch02-web-prototype 완성본 브랜치 열기](https://github.com/kangheeyeol/VibeCoding/tree/ch02-web-prototype)
+- 🌐 [루틴메이트 공식 배포 라이브 데모 바로가기](https://vibe-coding-delta-three.vercel.app/)
 ---
 ---

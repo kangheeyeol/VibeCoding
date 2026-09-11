@@ -49,4 +49,4 @@ Cursor나 웹 빌더에 아래 디자인 헌법 프롬프트를 입력하면, AI
 	```
 ---
 ## 7. 🛡️ [세이프티넷] 공식 템플릿
-- 🔗 [루틴메이트 공식 GitHub 저장소: Tailwind 테마 설정 파일(](https://github.com/vibe-coding-lab/routinemate-starter/blob/main/tailwind.config.js)[`tailwind.config.js`](https://github.com/vibe-coding-lab/routinemate-starter/blob/main/tailwind.config.js)[) 보기](https://github.com/vibe-coding-lab/routinemate-starter/blob/main/tailwind.config.js)
+- 🔗 [루틴메이트 공식 GitHub 저장소: Tailwind 테마 설정 파일(tailwind.config.js) 보기](https://github.com/kangheeyeol/VibeCoding/blob/main/tailwind.config.js)

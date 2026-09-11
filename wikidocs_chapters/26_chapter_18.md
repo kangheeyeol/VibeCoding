@@ -38,7 +38,7 @@ Git은 프로그래머들만의 전유물이 아닙니다.
 - [ ] 브라우저에서 `localhost:3000`을 새로고침했을 때 앱이 에러 없이 잘 동작하는가?
 ---
 ## 5. 🚨 [비상 대응] 빨간 글씨(에러)가 떴을 때 응급처치
-**Q. 파란색 [Commit] 버튼을 눌렀는데 "Make sure you configure your '**[**user.name**](http://user.name)**' and '**[**user.email**](http://user.email)**'"이라는 에러 팝업이 뜹니다!**  
+**Q. 파란색 [Commit] 버튼을 눌렀는데 "Make sure you configure your 'user.name' and 'user.email'"이라는 에러 팝업이 뜹니다!**  
 - **원인**: 컴퓨터에 "이 세이브 파일을 만든 사람이 누구인지" 이름표가 등록되지 않아서 생기는 최초 1회성 알림입니다.
 - **해결책**:
 	1. 하단 터미널(`Ctrl + ~`)을 엽니다.

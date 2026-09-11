@@ -77,6 +77,6 @@ AI(ChatGPT, Claude, 또는 Cursor)에게 다음 프롬프트를 전달하여 `SP
 	```
 ---
 ## 7. 🛡️ [세이프티넷] 공식 템플릿
-- 🔗 [루틴메이트 공식 GitHub 저장소: ](https://github.com/vibe-coding-lab/routinemate-starter/blob/main/SPEC.md)[`SPEC.md`](https://github.com/vibe-coding-lab/routinemate-starter/blob/main/SPEC.md)[ 원본 파일 열기](https://github.com/vibe-coding-lab/routinemate-starter/blob/main/SPEC.md)
+- 🔗 [루틴메이트 공식 GitHub 저장소: SPEC.md 원본 파일 열기](https://github.com/kangheeyeol/VibeCoding/blob/main/SPEC.md)
 ---
 ---

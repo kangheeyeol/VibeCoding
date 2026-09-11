@@ -59,6 +59,6 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.여러분의a
 	2. 다시 `npm run dev`를 입력하고 엔터를 쳐서 서버를 재부팅하세요.
 ---
 ## 6. 🛡️ [세이프티넷] 환경변수 공식 템플릿
-- 🔗 [루틴메이트 공식 ](https://github.com/kangheeyeol/VibeCoding/blob/main/.env.example)[`.env.example`](https://github.com/kangheeyeol/VibeCoding/blob/main/.env.example)[ 템플릿 파일 보기](https://github.com/kangheeyeol/VibeCoding/blob/main/.env.example)
+- 🔗 [루틴메이트 공식 .env.example 템플릿 파일 보기](https://github.com/kangheeyeol/VibeCoding/blob/main/.env.example)
 ---
 ---
